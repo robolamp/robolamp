@@ -1,0 +1,104 @@
+
+\documentclass[12pt,a4paper,final]{moderncv} 
+
+\moderncvstyle{classic}
+\moderncvcolor{grey}
+
+% character encoding
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+% \setlength{\hintscolumnwidth}{3cm}.
+
+% personal data
+
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+
+% personal data
+\name{Julia}{Semenova}
+% \title{Control systems developer}
+\address{}{Moscow}{Russian Federation}
+\phone[mobile]{+7~(916)~941~08~88}
+\email{redslowj@gmail.com}
+\social[github]{robolamp}
+
+\begin{document}
+\makecvtitle
+
+\section{Skills}
+\subsection{Main:}
+\cvitem{}{C++, Python (Jupyter, NumPy, Sklearn), Matlab/Simulink, SciLab, VisSim, Git, ROS, Dynamic systems math 
+modelling}
+\subsection{Experience with:}
+\cvitem{}{Bash, C, Linux, OpenCV, \LaTeX, JS (Underscore.JS, Backbone.JS), MongoDB, Django, Machine Learning }
+
+\section{Experience}
+% \subsection{Vocational}
+
+\cventry{July~2013 -- June~2015}{Control systems developer}{Modern Signal Processing and Contol Technologies R\&D Laboratory}{Chelyabinsk}{}{
+Control systems development.
+\begin{itemize}%
+\item Turboshaft control system development:
+  \begin{itemize}%
+  \item Turboshaft math modelling using MATLAB/Simulink;
+  \item Design, assembling and commissioning of turboshaft control system 
+  control cabinets;
+  \end{itemize}
+\item Autonomous car trajectory control system development:
+  \begin{itemize}%
+  \item Participated in car control system structure development; 
+  \item Control algorithms development and math modelling using MATLAB/Simulink
+   and VisSim;
+  \item Algorithms realization (C++, control unit with STM32 and NuttX RTOS);
+  \item Car control system test bench software development using Python 2.7 with NumPy and UDP;
+  \item Participated in commissioning, HIL and field tests;
+  \end{itemize}
+\item UAV test bench software development: Scilab, interaction with National
+ Instruments data acquisition system
+\end{itemize}}
+
+\cventry{January~2012 -- June~2015}{Laboratory assistant}{South Ural State
+ University}{Chelyabinsk}{}{Participated in research works.}
+
+\cventry{June~2015 -- October~2015}{Junior web-developer}{WETA Group}{Remote}{}{
+Full-stack web-development
+\begin{itemize}%
+\item Security system web-interface development: Two web-application were developed using Django non-rel backend and JS + Backbone.JS + Marionette.JS + Raphaël.JS frontend with MongoDB database;
+\end{itemize}}
+
+\cventry{October~2015 -- Now}{Junior research fellow}{Institute for Information Transmission Problems RAS (Kharkevich Institute)}{Moscow}{}{
+\begin{itemize}%
+\item Autonomus robot navigation and control software development (C++, ROS, Python);
+\item Initiative works in deep learning for robotics control.
+\end{itemize}}
+
+\section{Education}
+\cvitem{2010--2015}{
+  \textbf{National Research South Ural State University}; \newline
+  Computer Technologies, Control and Radio Electronics Faculty; \newline
+  Automation and Control Department; \newline
+  MEng, graduated with honours.
+}
+
+\cvitem{2015--2017}{
+  \textbf{Moscow Institute of Physics and Technology (State University)}; \newline
+  Deparment of Innovation and High Technologies; \newline
+  Cognitive technologies sub-faculty; \newline
+  MSc in Computer Science.
+}
+
+\section{Languages}
+\cvitemwithcomment{Russian}{Native speaker}{}
+\cvitemwithcomment{English}{Intermediate}{}
+\cvitemwithcomment{German}{Beginner}{}
+
+\section{Miscellaneous}
+\subsection{Interests}
+\cvitem{}{RC airplanes and quadrotors, skiing, bicycling.}
+
+\end{document}
+
+
+%% end of file `template.tex'.
