@@ -33,11 +33,15 @@
 \begin{itemize}%
 \item Self-driving car positioning and control software development:
   \begin{itemize}%
-  \item System launch tool to replace ROSLaunch (Python, ROS);
-  \item Local positioning system (C++, Kalman filters);
+  \item System launch tool to replace ROSLaunch (Python, ROS):
+    Just a more flexible tool than ROSLaunch.
+  \item Local positioning system (C++, Kalman filters):
+    Nothing too interesting: EKF and rollbacks/rollons to use measurements with various delays.
   \item Trajectory control system (C++, ROS);
-  \item Developers' web-interface (Python, JS, ROS);
-  \item Road markup-relied localization system (C++, ROS).
+  \item Developers' web-interface (Python, JS, ROS):
+    Interactive tool allows to correct positioning and control route passing.
+  \item Road markup-relied localization system (C++, ROS):
+    A system uses recognised road markup for more accurate positioning.
   \item Field testing;
   \end{itemize}
 \item Initiative works in deep learning for robotics control (just for fun).
