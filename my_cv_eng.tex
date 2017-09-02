@@ -1,5 +1,5 @@
 
-\documentclass[12pt,a4paper,final]{moderncv} 
+\documentclass[12pt,a4paper,final]{moderncv}
 
 \moderncvstyle{classic}
 \moderncvcolor{grey}
@@ -20,7 +20,8 @@
 \name{Yulia}{Yakovleva}
 % \title{Control systems developer}
 \address{}{Moscow}{Russian Federation}
-\email{redslowj@gmail.com}
+% \email{redslowj@gmail.com}
+\email{robolamp@ya.ru}
 \social[github]{robolamp}
 
 \begin{document}
@@ -29,19 +30,19 @@
 \section{Experience}
 % \subsection{Vocational}
 
-\cventry{October~2015 -- Now}{Researcher-developer}{Institute for Information Transmission Problems RAS (Kharkevich Institute)}{Moscow}{}{
+\cventry{October~2015 -- August~2017}{Robotics researcher/developer}{Institute for Information Transmission Problems RAS (Kharkevich Institute)}{Moscow}{}{
 \begin{itemize}%
 \item Self-driving car positioning and control software development:
   \begin{itemize}%
-  \item System launch tool to replace ROSLaunch (Python, ROS):
+  \item System launch tool to replace ROSLaunch (Python, ROS, Paramiko):
     Just a more flexible tool than ROSLaunch.
-  \item Local positioning system (C++, Kalman filters):
-    Nothing too interesting: EKF and rollbacks/rollons to use measurements with various delays.
+  \item Local positioning system (C++, Eigen, Kalman filters):
+    EKF and rollbacks/roll-ons to use measurements with various delays.
   \item Trajectory control system (C++, ROS);
-  \item Developers' web-interface (Python, JS, ROS):
+  \item Developers' web-interface (Python, JS (Leaflet.JS, Bootstrap),  ROS):
     Interactive tool allows to correct positioning and control route passing.
   \item Road markup-relied localization system (C++, ROS):
-    A system uses recognised road markup for more accurate positioning.
+    A system uses recognized road markup for more accurate positioning.
   \item Field testing;
   \end{itemize}
 \item Initiative works in deep learning for robotics control (just for fun).
@@ -59,12 +60,12 @@ Control systems development.
 \item Turboshaft control system development:
   \begin{itemize}%
   \item Turboshaft math modelling using MATLAB/Simulink;
-  \item Design, assembling and commissioning of turboshaft control system 
+  \item Design, assembling and commissioning of turboshaft control system
   control cabinets;
   \end{itemize}
 \item Autonomous car trajectory control system development:
   \begin{itemize}%
-  \item Participated in car control system structure development; 
+  \item Participated in car control system structure development;
   \item Control algorithms development and math modelling using MATLAB/Simulink
    and VisSim;
   \item Algorithms realization (C++, control unit with STM32 and NuttX RTOS);
@@ -101,10 +102,10 @@ Control systems development.
 
 \section{Skills}
 \subsection{Main:}
-\cvitem{}{C++, Python (Jupyter, NumPy, Sklearn), Matlab/Simulink, SciLab, VisSim, Git, ROS, Dynamic systems math 
-modelling}
+\cvitem{}{C++ (Eigen, Boost), Python (Jupyter, NumPy, Sklearn, Paramiko), Matlab/Simulink, SciLab, VisSim, Git, ROS, Linux, \LaTeX, Dynamic systems math
+modelling.}
 \subsection{Experience with:}
-\cvitem{}{Bash, C, Linux, OpenCV, \LaTeX, JS (Underscore.JS, Backbone.JS), MongoDB, Django, Machine Learning }
+\cvitem{}{Bash, C, OpenCV, JS (Underscore.JS, Backbone.JS, Leaflet.JS), MongoDB, Django, Machine Learning, Computer Vision. }
 
 
 \section{Miscellaneous}
