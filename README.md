@@ -11,6 +11,12 @@ A short talk in Russian about the difficulties of traffic lights recognition and
 
 Presented at [Yandex Self-Driving Meetup 2019](https://medium.com/yandex-self-driving-car/yandex-self-driving-meetup-817e905b3d4a), [PyLadies Moscow](https://twitter.com/pyladies_msk/status/1145709227513733120), [PyLadies Kazan](https://twitter.com/pyladieskzn/status/1161901466430377985)
 
+**Myths about Self-Driving Cars**
+
+An interactive talk in Russian about self-driving cars architecture, sensors and testing.
+
+Presented at [WTM Moscow](https://gdgmoscow.timepad.ru/event/1101498/)
+
 ## My pet projects
 
 **rTerm**
