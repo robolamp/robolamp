@@ -21,4 +21,12 @@ Presented at [WTM Moscow](https://gdgmoscow.timepad.ru/event/1101498/)
 
 **rTerm**
 
-Fake JS-based UNIX term for my personal page and for fun! [Link to repo](https://github.com/robolamp/rTerm)
+Fake JS-based UNIX term for my personal page and for fun!
+
+[Link to repo](https://github.com/robolamp/rTerm)
+
+**Random three body problem bot**
+
+A program which is simulating the behaviour of random three body system multiple times and publishing animation of the most interesting one every two hours at [Telegram channel](https://t.me/random_three_body_problem).
+
+[Link to repo](https://github.com/robolamp/3_body_problem_bot)
