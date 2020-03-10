@@ -19,6 +19,12 @@ An interactive talk in Russian about self-driving cars architecture, sensors and
 
 Presented at [WTM Moscow](https://gdgmoscow.timepad.ru/event/1101498/)
 
+**Data mining in Yandex Self-Driving Cars**
+
+A short talk in Russian about data processing pipeline in Yandex Self-Driving Car project 
+
+Presented at [Pytup Moscow](https://events.yandex.ru/events/pytup-26-02-2020)
+
 ## My pet projects
 
 **rTerm**
