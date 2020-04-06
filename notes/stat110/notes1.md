@@ -21,7 +21,7 @@ De Morgan's laws:
 $(A \cup B)^c = A^c \cap B^c$ | $A$ OR $B$ not occur = $A$ not occur AND $B$ not occur
 $(A \cap B)^c = A^c \cup B^c$ | $A$ AND $B$ not occur = $A$ not occur OR $B$ not occur
 
-##1.3 Naive definition of probability
+## 1.3 Naive definition of probability
 
 
 $$P_{naive}(A) = \frac{|A|}{|S|}$$
@@ -66,3 +66,22 @@ Story proof:
 
 Consider a group of  $m$  peacocks and  $n$  toucans, from which a set of size  $k$  birds will be chosen.
 There are  $\binom{n + m}{k}$  possibilities for this set of birds. If there are  $j$  peacocks in the set, then there must be  $k−j$  toucans in the set. The right-hand side of Vandermonde's identity sums up the cases for  $j$.
+
+## 1.6 General definition of probability
+
+A **probability space** = *sample space* $S$ and *probability function* $P$. Event $A \subseteq S$.
+$P(A) = [0, 1]$.
+
+Axioms for *probability function* $P$:
+
+1. $P(\emptyset) = 0, P(1) = 1$
+2. If $A_1, A_2, ...$ are disjoint:
+$$
+P(\bigcup^{\infty}_{j=1}A_j) = \sum^{\infty}_{j=1}P(A_j).
+$$
+
+("$A_i, A_j$ are disjoint" means that $A_{i} \cap A_{j} = \emptyset$ if $i \ne j$)
+
+The **frequentist view** of probability: if we say a coin has probability 1/2 of Heads, that means the coin would land Heads 50% of the time if we tossed it over and over and over (long-run frequency).
+
+The **Bayesian view** of probability: represents a degree of belief about the event in question. We can assign probabilities to hypotheses even if it isn't possible to repeat the experiment over and over again.
