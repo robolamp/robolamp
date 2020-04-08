@@ -85,3 +85,25 @@ $$
 The **frequentist view** of probability: if we say a coin has probability 1/2 of Heads, that means the coin would land Heads 50% of the time if we tossed it over and over and over (long-run frequency).
 
 The **Bayesian view** of probability: represents a degree of belief about the event in question. We can assign probabilities to hypotheses even if it isn't possible to repeat the experiment over and over again.
+
+**Properties of probability:**
+
+$\forall A,B$,
+
+1. $P(A^C)=1-P(A)$
+2. If $A\subseteq B$, then $P(A) \le P(B)$
+3. $P(A\cup B) = P(A) + P(B) - P(A\cap B)$ *inclusion-exclusion*
+
+Inclusion-exclusion for $n$ events:
+
+$\forall A_1,..A_n$,
+
+$$
+P(\bigcup^n_{i=1}A_i)=\sum_i P(A_i) - \sum_{i<j}P(A_i\cap A_j) + \sum_{i<j<k}P(A_i \cap A_j \cap A_k) - ...
+$$
+
+$$
++ (-1)^{n+1}P(A_i \cap ... \cap A_n)
+$$
+
+Can be simply used if $A_i$ are symmetric else it is very tedious.
