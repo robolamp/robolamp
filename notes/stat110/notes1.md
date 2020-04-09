@@ -48,11 +48,11 @@ There are $n!$ permutations of $1,2,...,n$
 **Binomial coefficient**: $\binom{n}{k}$ = "$n$ choose $k$" number of subsets of size $k$ for a set of size $n$.
 For example, $\binom{4}{2}=6$
 
-For $n \le k$:
+For $k \le n$:
 
 $$\binom{n}{k}=\frac{n(n-1)...(n-k+1)}{k!}=\frac{n!}{(n-k)!k!}$$
 
-For $n > k$:
+For $k > n$:
 
 $$\binom{n}{k}=0$$
 
