@@ -107,3 +107,5 @@ $$
 $$
 
 Can be simply used if $A_i$ are symmetric else it is very tedious.
+
+ **NB:** Hypergeometric probability
