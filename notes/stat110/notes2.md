@@ -63,10 +63,43 @@ $$
 
 The **law of total probability (LOTP)** relates conditional probability to unconditional probability:
 
- $A_1,...,A_n$ a partition of the sample space $S$ ($A_i$ disjoint, their union is $S$), $P(A_i)>0 \forall i$ then:
+$A_1,...,A_n$ a partition of the sample space $S$ ($A_i$ disjoint, their union is $S$), $P(A_i)>0 \forall i$ then:
 
 $$
 P(B) = \sum^n_{i=1}P(B|A_i)P(A_i)
 $$
 
-TODO: proof
+Proof:
+
+Decompsition of $B$:
+$$
+B = (B\cap A_1)\cup(B\cap A_2)\cup...\cup(B\cap A_n)
+$$
+then
+$$
+P(B) = P(B\cap A_1)+...+P(B\cap A_n) = P(B|A_1)P(A_1)...P(B|A_n)P(A_n)
+$$
+
+The choice of how to divide up the sample space is crucial!
+
+## 2.4 Conditional probabilities are probabilities
+
+When we condition on an event E, we update our beliefs to be consistent with this knowledge, effectively putting ourselves in a **universe where we know that E occurred**.
+
+**Bayes' rule with extra conditioning**
+
+$P(A\cap E)>0$ and $P(B\cap E)>0$
+
+$$
+P(A|B,E)=\frac{P(B|A,E)P(A|E)}{P(B|E)}
+$$
+
+**LOTP with extra conditioning**
+
+$A_1,...,A_n$ is a partition of $S$, $P(A_i \cap E)>0 \forall i$
+
+$$
+P(B|E) = \sum^n_{i=1}P(B|A_i,E)P(A_i|E)
+$$
+
+## 2.5 Independence of events
