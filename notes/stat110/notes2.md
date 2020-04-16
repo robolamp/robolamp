@@ -103,3 +103,63 @@ P(B|E) = \sum^n_{i=1}P(B|A_i,E)P(A_i|E)
 $$
 
 ## 2.5 Independence of events
+
+$A$ and $B$ are independent if
+
+$$
+P(A\cap B)=P(A)P(B)
+$$
+
+if $P(A)>0$ and $P(B)>0$,
+
+$$
+P(A|B)=P(A)
+$$
+
+ Two events are independent if we can obtain the probability of their intersection by multiplying their individual probabilities.
+
+If $A$ is independent of $B$, then $B$ is independent of $A$.
+
+**Independence is not disjointness!!!**
+
+If $A$ and $B$ are disjoint, $P(A\cap B)=0$
+
+Disjoint events can be independent only if $P(A)=0$ or $P(B)=0$.
+
+Knowing that $A$ occurs tells us that $B$ definitely did not occur.
+
+Independence of three or more events!
+
+$$
+P(A\cap B) = P(A)P(B),
+$$
+$$
+P(A\cap C) = P(A)P(C),
+$$
+$$
+P(B\cap C) = P(B)P(C).
+$$
+
+If these three conditions are hold: $A$, $B$, $C$ are *pairwise independent* $\neq$ *independence*.
+
+For example, it is possible that $A$, $B$ occurred would give us knowledge about $C$.
+
+For full independence, 4th condition:
+
+$$
+P(A\cap B\cap C) = P(A)P(B)P(C).
+$$
+
+Conditional independence:
+
+$$
+P(A\cap B|E)=P(A|E)P(B|E).
+$$
+
+*Conditional independence* $\neq$ *independence*
+
+(example with biased and fair coin)
+
+*Independence* $\neq$ *conditional independence*
+
+## 2.6 Conditioning as a problem-solving tool
