@@ -163,3 +163,123 @@ $$
 *Independence* $\neq$ *conditional independence*
 
 ## 2.6 Conditioning as a problem-solving tool
+
+### 2.6.1 Strategy: condition on what you wish you knew
+
+**Example: Monty Hall**
+
+Without loss of generality, we can assume the contestant picked door 1
+
+$C_i$ the event that the car is behind $i$-th door
+
+$$P(get car)=P(get car|C_1)\frac{1}{3} + P(get car|C_2)\frac{1}{3} + P(get car|C_3)\frac{1}{3}$$
+
+Switching strategy:
+if the car behind 1, switching will fail $P(get car|C_1)=0$.
+
+If the car behind 2 or 3, because Monty always reveals a goat, switching will succeed. Thus,
+
+$$P(get car)= 0\frac{1}{3} + 1\frac{1}{3} + 1\frac{1}{3} = \frac{2}{3}$$
+
+So *unconditional probability* of success is $2/3$ (when following the switching strategy), let's also show that the *conditional probability* of success for switching, given the information that Monty provides, is also $2/3$.
+
+Let $M_j$ be the event that Monty opens $j$-th door. Then:
+
+$$
+P(get car)=P(get car|M_2)P(M_2)+P(get car|M_3)P(M_3),
+$$
+
+by symmetry, $P(M_2)=P(M_3)=1/3$, $P(get car|M_2)=P(get car|M_3)$
+
+so $P(get car|M_2)=P(get car|M_3)=2/3$
+
+Bayes' rule:
+
+Suppose that Monty opens door 2,
+$$
+P(C_1|M_2)=\frac{P(M_2|C_1)P(C_1)}{P(M_2)} = \frac{(1/2)(1/3)}{1/2}=\frac{1}{3}
+$$
+
+So there is 1/3 chance that original choice was correct, which means that 2/3 chance that switching strategy was better.
+
+### 2.6.2 Strategy: condition on the first step
+
+**Example: Branching process**
+
+A single amoeba, Bobo, lives in a pond.
+At minute, Bobo will die, or do nothing or split to two amoebas with probabilities 1/3.
+
+What is the probability that the amoeba population will eventually die out?
+
+$D$ is the evenr that the population dies out,
+$B_i$ is the event that Bobo will turn into $i=0,1,2$ amoebas.
+
+$$
+P(D) = \frac{P(D|B_0)}{3} + \frac{P(D|B_1)}{3} + \frac{P(D|B_2)}{3}
+$$
+
+$P(D|B_0) = 1, P(D|B_0)=P(D),$ (we're back to where we started) $P(D|B_2)=P(D)^2$, (two independent original problems). So:
+
+$$
+P(D)=1/3+P(D)/3+P(D)^2/3
+$$
+
+Solving: $P(D)=1$
+
+**Example: Gambler's ruin**
+
+A and B make a sequence of \$1 bets. A has probability $p$ of winning, B has $q=1-p$. A starts with $\$i$ B starts with $\$N−i$
+
+Game ends when $A$ or $B$ is ruined.
+
+What is the probability that A wins the game?
+
+After the first step, it's exactly the same game, except that A's wealth is now either $i+1$ or $i−1$.
+
+$p_i$ is the probability that A wins, given that A starts with $i$ dollars. $W$ is the event that A wins.
+
+By LOTP,
+
+$$
+p_i = P(W|A\ starts\ at\ i,\ wins)p + P(W|A\ starts\ at\ i,\ loses)q =
+$$
+
+$$
+=P(W|A\ starts\ at\ i + 1 )p+P(W|A\ starts\ at\ i -1 )q=
+$$
+
+$$
+=p_{i+1}p + p_{i-1}q.
+$$
+
+This is true $\forall i \in[1, N-1]$, boundary conditions $p_0=0, p_N=1$
+
+Solving this as *difference equation* to obtain $p_i$:
+
+$$
+if\ p \neq 1/2,\ p_i = \frac{1-(q/p)^i}{1-(q/p)^N},
+$$
+
+$$
+if\ p = 1/2,\ p_i = \frac{i}{N}.
+$$
+
+**Example: Simpson's paradox**
+
+For events $A$, $B$, and $C$, we say that we have a *Simpson's paradox* if:
+
+$$
+P(A|B, C)<P(A|B^C,C)
+$$
+
+$$
+P(A|B, C^C)<P(A|B^C,C^C)
+$$
+
+but
+
+$$
+P(A|B)>P(A|B^C).
+$$
+
+Aggregation across different types of surgeries presents a misleading picture of the doctors' abilities because we lose the information about which doctor tends to perform which type of surgery.
