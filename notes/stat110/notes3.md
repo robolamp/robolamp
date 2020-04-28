@@ -41,3 +41,35 @@ The *distribution* of a RV specifies (for example) the probabilities of all even
 For a discrete RV, the most natural way to do so is with a **probability mass function (PMF)**:
 
 PMF of discrete RV $X$ is the function $p_X$ given by $p_X(x)=P(X=x)$. If $x$ not in support of $X$, $p_X(x)=0$. $X=x$ denotes as an *event*, all outcomes $s$ to which $X$ assigns to the number $x$.
+
+### PMF example:
+
+Two fair coin tosses. RV: $X$, the number of Heads:
+$$
+p_X(0)=P(X=0)=1/4
+$$
+$$
+p_X(1)=P(X=1)=1/2
+$$
+$$
+p_X(2)=P(X=2)=1/4
+$$
+
+### Properties of a valid PMF:
+
+$X$ is a discrete RV with support $x_1, x_2, ...$
+
+The PMF $p_X$ of $X$ must satisfy following criteria:
+
+* Nonnegative $p_X(x)>0$ if $x=x_j$ for some $j$ and $p_X(x)=0$ otherwise;
+* Sums to 1: $\sum^\infty_{j=1}p_X(x_j)=1$
+
+### Example: Poisson Distribution
+
+An RV $X$ has the Poisson distribution with parameter $\lambda$ where $\lambda>0$ if PMF of $X$:
+
+$$
+P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}, k=0,1,2...
+$$
+
+The Poisson also arises through the Poisson process, a model that is used in a wide variety of problems in which events occur at random points in time.
