@@ -73,3 +73,40 @@ P(X=k)=\frac{e^{-\lambda}\lambda^k}{k!}, k=0,1,2...
 $$
 
 The Poisson also arises through the Poisson process, a model that is used in a wide variety of problems in which events occur at random points in time.
+
+## 3.3 Bernoulli and Binomial
+
+Named distributions!
+
+RV $X$ has *Bernoulli distribution* with parameter $p$ if $P(X=1)=p$ and $P(X=0)=1-p$ where $0<p<1$.
+It can be written as $X \sim Bern(p)$.
+
+Any event has a Bernoulli RV that is naturally associated with it!
+This is called the *indicator RV*.
+
+Indicator RV of event $A$ is $I_A$ or $I(A)$.
+
+*Bernoulli trial*: an experiment which can result in "success" or "failure" (not both).
+
+$n$ independent Bernoulli trials each with success probability $p$.
+RV $X$ is the number of success. The distribution of $X$ is called *Binomial distribution* with parameters $n$ and $p$. $X \sim Bin(n,p)$.
+
+*Binomial PMF*:
+If $X \sim Bin(n,p)$ then the PMF of $X$ is:
+$$
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
+$$
+for $k=0,1,...,n$ and $P(X=k)=0$ otherwise.
+
+PMF of the $Bin(10,1/2)$ is symmetric about 5. If $p\neq1/2$, the PMF is *skewed*.
+
+If $X \sim Bin(n, p)$ and $q=1-p$ (so $q$ is failure probability of Bernoulli trial), $n-X \sim Bin(n,q)$.
+
+Corollary:
+
+Distribution of $X$ is symmetric about $n/2$. Why?
+$$
+P(X=k)=P(n-X=k)=P(X=k-k) \forall k > 0
+$$
+
+## 3.4 Hypergeometric
