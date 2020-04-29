@@ -180,3 +180,17 @@ $$
 $$
 \lim_{x\rightarrow - \infty}F(x)=0,\ \lim_{x\rightarrow \infty}F(x)=1
 $$
+
+## 3.7 Functions of RVs
+
+For an experiment with sample space $S$, RV $X$, and function $g: \mathbb{R} \rightarrow \mathbb{R}, g(X)$ is the RV that maps $s$ to $g(X(s))\ \forall s \in S$.
+
+Example: $g(x)=\sqrt{x}$. If $X$ crystallizes to 4, then $g(X)$ crystallizes to 2.
+
+Warning: **Category errors**
+
+An especially common category error is to confuse a random variable with its distribution.
+
+*The word is not the thing; the map is not the territory.* - Alfred Korzybski
+
+## 3.8 Independence of random variables
