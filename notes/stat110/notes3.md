@@ -147,3 +147,36 @@ P(X\in A)=\frac{|A|}{|C|}.
 $$
 
 ## 3.6 Cumulative distribution functions
+
+Unlike the PMF, which is only for discrete RVs, CDF is defined for all RVs.
+
+The **cumulative distribution function** (CDF) of an RV $X$ is the function $F_X(x)=P(X\leq x)$.
+
+How to convert between CDF and PMF for discrete RVs:
+
+Example:
+
+Let $X\sim Bin(4,1/2)$.
+
+![image](PMFtoCDF.png "Bin(4,1/2) PMF and CDF")
+
+The height of bar $P(X=2)$ in the PMF is also head of jump in the CDF at 2!
+
+* PMF $\rightarrow$ CDF: To find $P(X\leq 1.5)$ which is the CDF evaluated at 1.5, we will sum PMFs over all values $\leq 1.5$:
+$$
+P(X\leq 1.5) = P(X=0) + P(X=1)=\Big(\frac{1}{2}\Big)^4+4\Big(\frac{1}{2}\Big)^4=\frac{5}{16}.
+$$
+
+* CDF $\rightarrow$ PDF: The CDF of discrete RV is jumps are flat regions. The height of a jump in the CDF at $x$ is equal to the value of the PMF at $x$.
+
+Any CDF $F$ has the following properties:
+
+* Increasing: if $x_1 \leq x_2$, $F(x_1) \leq F(x_2)$.
+* Right-continuous: Wherever there is a jump, the CDF is continuous from the right: $\forall a$
+$$
+F(a)=\lim_{x\rightarrow a^+} F(x).
+$$
+* Convergence to 0 and 1:
+$$
+\lim_{x\rightarrow - \infty}F(x)=0,\ \lim_{x\rightarrow \infty}F(x)=1
+$$
