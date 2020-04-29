@@ -110,3 +110,40 @@ P(X=k)=P(n-X=k)=P(X=k-k) \forall k > 0
 $$
 
 ## 3.4 Hypergeometric
+
+Experiment with an urn filled with $w$ white and $b$ black balls.
+For number of white balls obtained $n$ with replacement: $Bin(n,w/(w+b))$. If we do the same but without replacement, the number of white balls follows a *Hypergeometric distribution*.
+
+We draw $n$ balls out of the urn, all $\binom{w+b}{b}$ samples are equally likely. Number of balls $X$ have the *Hypergeometric distribution*.
+
+*Hypergeometric PMF*:
+If $X \sim HGeom(w,b,n)$, then PMF of $X$ is
+$$
+P(X=k)=\frac{\binom{w}{k}\binom{b}{n-k}}{\binom{w+b}{n}}
+$$
+for $k\ 0\leq k\leq w$ and $0\leq n-k\leq b$ and $P(X=k)=0$ otherwise.
+
+The Hypergeometric distribution comes up in many scenarios!
+
+Example: Elk capture-recapture
+
+Forest has $N$ elk. Today $m$ of elk captured and released, later $n$ elk are recaptured. The number of tagged and recaptured elk has $HGeom(m,N-m,n)$ distribution where $m$ is number of tagged elk, $N-m$ is number of untagged elk.
+
+Warning: **Binomial vs Hypergeometric!**
+
+The Binomial and Hypergeometric distributions are often confused. But in Binomial all Bernoulli trials are **independent** while in Hypergeometric trails trails are **dependent**.
+
+## 3.5 Discrete Uniform
+
+Picking a random number from some finite set of possibilities. Let $C$ be a finite, nonempty set of numbers.
+
+RV $X$ has the *Discrete Uniform distribution* with parameters $C$; we denote this by $X\sim DUnif(C)$. The PMF of $X\sim DUnif(C)$ is:
+$$
+P(X=x)=\frac{1}{|C|}
+$$
+For $x \in C$ and 0 otherwise. And $\forall A \subseteq C$:
+$$
+P(X\in A)=\frac{|A|}{|C|}.
+$$
+
+## 3.6 Cumulative distribution functions
