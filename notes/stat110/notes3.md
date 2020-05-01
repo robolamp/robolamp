@@ -194,3 +194,47 @@ An especially common category error is to confuse a random variable with its dis
 *The word is not the thing; the map is not the territory.* - Alfred Korzybski
 
 ## 3.8 Independence of random variables
+
+RVs $X$ and $Y$ are *independent* if:
+$$
+P(X\leq x, Y\leq y)=P(X\leq x)P(Y\leq y)
+\\
+\forall x, y \in \mathbb{R}
+$$
+In discrete case:
+$$
+P(X=x, Y=y)=P(X=x)P(Y=y)
+\\
+\forall x \in support\ X,\ \forall y \in support\ Y
+$$
+
+IID RVs = *Independent and identically distributed* RVs
+
+If $X\sim Bin(n,p)$ is a number of success in $n$ independent Bernoulli trials w success probability $p$, then we $X=X_1+...+X_n$ where $X_i$ are IID RVs $\sim Bern(p)$.
+
+If $X\sim Bin(n,p),\ Y\sim Bin(m,p)$ and $X$ is independent of $Y$ then $X+Y\sim Bin(n+m,p).$
+
+Conditional independence of RVs:
+
+RVs $X$ and $Y$ are conditionally independent given an RV $Z\ \forall x, y \in \mathbb{R}$ and $z \in$ support of $Z$:
+$$
+P(X \leq x,Y \leq y|Z=z)=P(X \leq x|Z=z)P(Y \leq y|Z=z).
+$$
+For discrete RVs:
+$$
+P(X=x,Y=y|Z=z)=P(X=x|Z=z)P(Y=y|Z=z).
+$$
+
+Conditional PMFs:
+
+$\forall$ RVs $X$ and $Z$, $P(X=x|Z=z)$ considered as function of $x$ for fixed $z$ is called the *conditional PMF of $X$ given $Z=z$*.
+
+Example: matching pennies
+
+2 gamers: A and B. 2 flips independently. If pennies match, A wins, B otherwise. Let $X=1$ if A penny lands Heads and $X=-1$ otherwise, $Y$ is similar for B.
+
+Let $Z=XY$ which is $1$ if A wins and $-1$ if B wins.
+
+Then $X$, $Y$ are unconditionally independent, but given $Z=1$ we know that $X=Y$, so $X$ and $Y$ are conditionally dependent given $Z$.
+
+Also conditional independence does not imply independence!
