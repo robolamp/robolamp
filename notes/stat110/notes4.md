@@ -51,3 +51,34 @@ Or $P(−2<X<2)$ is indicated by the shaded area under the PDF and the height of
 ![image](logPDFCDF.png)
 
 ## 4.2 Uniform distribution
+
+A continuous RV $U$ has the *Uniform distribution* $X \sim Unif(a, b)$ on the interval $(a, b)$ if its PDF is:
+
+$$
+f(x)=\frac{1}{b-a}\ \forall a < x < b,\\
+f(x)=0\ otherwise
+$$
+
+The CDF is the accumulated area under the PDF:
+
+$$
+F(x)=0\ \forall x \leq a,\\
+F(x)=\frac{x-a}{b-a}\ a < x < b,\\
+F(x)=1\ \forall x \geq b.\\
+$$
+
+$Unif(0,1)$ is the standard Uniform.
+
+For Uniform distributions, *probability is proportional to length.*
+
+Location-scale transformation.
+
+The RV $Y$ has been obtained as a *location-scale transformation* of $X$ if $Y=\sigma X + \mu$. $\mu$ controls the location and $\sigma$ controls the scale.
+
+**Warning**: if $Y$ is a linear function of $X$, the Uniformity is preserved, but if $Y$ is defined as a *nonlinear* transformation of $X$, $Y$ will not be Uniform.
+
+**Warning**: When using location-scale transformations, the shifting and scaling should be applied to the *random variables* themselves, not to their PDFs.
+
+## 4.3 Universality of the Uniform
+
+Given a $Unif(0,1)$ RV, we can construct an RV with *any continuous distribution we want.*
