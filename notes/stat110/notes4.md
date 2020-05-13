@@ -79,6 +79,34 @@ The RV $Y$ has been obtained as a *location-scale transformation* of $X$ if $Y=\
 
 **Warning**: When using location-scale transformations, the shifting and scaling should be applied to the *random variables* themselves, not to their PDFs.
 
-## 4.3 Universality of the Uniform
+## 4.3 Universality of the Uniform distribution
 
-Given a $Unif(0,1)$ RV, we can construct an RV with *any continuous distribution we want.*
+Given a $Unif(0,1)$ RV, we can construct an RV with *any continuous distribution we want*.
+
+Other names of the universality of Uniform:
+ * probability integral transform,
+ * inverse transform sampling,
+ * the quantile transformation,
+ * the fundamental theorem of simulation.
+
+**Theorem:**
+
+$F$ is a CDF which is continuous function and strictly increasing on the support of distribution. This ensures that the inverse function $F^{-1}$ exists as function $(0, 1) \rightarrow \mathbb{R}$. Results:
+
+1. Let $U \sim Unif(0,1)$ and $X=F^{-1}(U)$. Then $X$ is an RV with CDF $F$.
+2. Let $X$ be an RV with CDF $F$. Then $F(X) \sim Unif(0,1)$.
+
+What this theorem is saying about?
+
+Fist part: Since $F^{-1}$ is a function (**quantile function**), $U$ is a RV, and a function of RV is RV, $F^{-1}(U)$ is a RV; universality of the Uniform says its CDF is $F$.
+
+Second part: reverse direction!
+Starting from RV $X$ whose CDF is $F$ and then creating RV $Unif(0,1)$.
+Universality of the Uniform says that the distribution of $F(X)$ is Uniform on $(0,1)$.
+
+Warning: potential notational collusion!
+
+$F(x)=P(X\leq x)$ by definition, but $F(X)=P(X\leq X)=1$ is incorrect by definition.
+Rather, we should first find an expression for the CDF as a function of $x$, then replace $x$  with $X$ to obtain a random variable. For example, if the CDF of $X$ is $F(x)=1-e^{-1}$ for $x>0$, then $F(X)=1-e^{-X}$.
+
+## 4.4 Normal distribution
