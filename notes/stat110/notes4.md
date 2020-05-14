@@ -121,3 +121,25 @@ So! $50%$ of students have a percentile of at least $0.5$.
 $10%$ have a percentile between $(0, 0.1)$, and between $(0.1, 0.2)$, ...
 
 ## 4.4 Normal distribution
+
+A famous continuous distribution with a bell-shaped PDF!
+
+A continuous RV $Z$ has the *standard Normal distribution* if its PDF $\varphi$ is:
+
+$$
+\varphi(z)=\frac{1}{\sqrt{2\pi}}e^{-z^2/2},\ -\infty < z < \infty.
+$$
+
+We write this as $Z\sim \mathcal{N}(0,1)$.
+
+It is widely used in statistics because of the *central limit theorem*, which says that under very weak assumptions, the sum of a large number of IID (independent and identically distributed) RVs has an approximately Normal distribution, regardless of the distribution of the individual RVs.
+
+Why it has $1/\sqrt{2\pi}$ in PDF? We need this constant to integrate PDF to $1$. Such constants are called *normalizing constants*.
+
+The standard Normal $\varPhi$ CDF is the accumulated area under the PDF:
+
+$$
+\varPhi(z)=\int^z_{-\infty}\varphi(z)dt=\int^z_{-\infty}\frac{1}{\sqrt{2\pi}}e^{-t^2/2}dt
+$$
+
+![image](NormalPDFCDF.png)
