@@ -109,4 +109,15 @@ Warning: potential notational collusion!
 $F(x)=P(X\leq x)$ by definition, but $F(X)=P(X\leq X)=1$ is incorrect by definition.
 Rather, we should first find an expression for the CDF as a function of $x$, then replace $x$  with $X$ to obtain a random variable. For example, if the CDF of $X$ is $F(x)=1-e^{-1}$ for $x>0$, then $F(X)=1-e^{-X}$.
 
+Example: percentiles
+
+Exam, grades 0-100, RV $X$ is the score of random student. We approximate the discrete distribution of scores using continuous distribution. So $X$ is continuous RV, CDF is strictly increasing on $(0, 100)$. Suppose median score is $60$. So $F(60)=1/2$ or $F^{-1}(1/2)=60$
+
+If student scores $72$ on the exam, then his **percentile** is the fraction of students who's score is below $72$. This is $F(72)$ which is number $(0.5,1)$. Other way, if we have percentile $0.95$, the score is $F^{-1}(0.95)$. Percentile is also called a *quantile*, $F^{-1}$ is *quantile function*.
+
+The universality property says that $F(X) \sim Unif(0,1)$.
+
+So! $50%$ of students have a percentile of at least $0.5$.
+$10%$ have a percentile between $(0, 0.1)$, and between $(0.1, 0.2)$, ...
+
 ## 4.4 Normal distribution
