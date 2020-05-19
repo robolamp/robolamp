@@ -143,3 +143,59 @@ $$
 $$
 
 ![image](NormalPDFCDF.png)
+
+So $\varphi$ is a standard Normal PDF, $\varPhi$ is a standard Normal CDF, $Z$ is standard Normal RV.
+
+Normal PDF and CDF are looking similar to Logistic ones, but Normal PDF decays to $0$ more quickly: almost all the area under $\varphi$ is between $-3, 3$ while for Logistic PDF it is between $-5, 5$.
+
+Properties of Normal PDF and CDF:
+
+1. *Symmetry of PDF*: $\varphi(z)=\varphi(-z)$, $\varphi$ is an even function.
+2. *Symmetry of tail areas*: The area under PDF curve is left to $-2$ equals to area to the right of $2$,
+$$
+\varPhi(z) = 1 - \varPhi(-z)\ \forall z
+$$
+
+Proof:
+$$
+\varPhi(z) = \int^{-z}_{-\infty}\varphi(t)dt=
+ \int^{\infty}_{z}\varphi(u)du=
+1-\int^{z}_{-\infty}\varphi(u)du=1-\varPhi(z)
+$$
+
+3. *Symmetry of $Z$ and $-Z$*: If $Z\sim \mathcal{N}(0,1)$, then $-Z\sim \mathcal{N}(0,1)$ as whell.
+
+Proof:
+$$
+P(-Z\leq z)=P(Z\leq -z)=1 -\varPhi(-z)=\varPhi(z)
+$$
+
+**Normal distribution:**
+
+If $Z\sim \mathcal{N}(0,1)$, then:
+$$
+X=\mu +\sigma Z
+$$
+Is normal distribution with mean parameter $\mu$ and variance parameter $\sigma^2$, $\forall$ real $\mu$, $\sigma^2$ and $\sigma > 0$. We denote this by: $X\sim \mathcal{N}(\mu,\sigma^2)$.
+
+If $X\sim \mathcal{N}(\mu,\sigma^2)$,
+
+$$
+\frac{X-\mu}{\sigma} \sim \mathcal{N}(0,1).
+$$
+
+It is called *standardization*. We can use it to find PDF and CDF of $X$:
+
+$$
+F(x)=\varPhi(\frac{x-\mu}{\sigma}),\\
+f(x)=\varphi(\frac{x-\mu}{\sigma})\frac{1}{\sigma}.
+$$
+
+**Important numbers** if $X\sim \mathcal{N}(\mu,\sigma^2)$, then
+$$
+P(|X-\mu|<\sigma) \approx 0.68 \\
+P(|X-\mu|<2\sigma) \approx 0.95 \\
+P(|X-\mu|<3\sigma) \approx 0.997
+$$
+
+## 4.5 Exponential distribution
