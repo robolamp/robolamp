@@ -199,3 +199,35 @@ P(|X-\mu|<3\sigma) \approx 0.997
 $$
 
 ## 4.5 Exponential distribution
+
+It is widely used as a simple model for the waiting time for a certain kind of event to occur.
+
+A continuous RV has an **Exponential distribution** with the parameter $\lambda$, where $\lambda > 0$ if its PDF is:
+
+$$
+f(x)=\lambda e^{-\lambda x},\ x > 0.
+$$
+
+We denote this by $X\sim Expo(\lambda)$.
+CDF:
+$$
+F(x)=1-e^{-\lambda x},\ x > 0.
+$$
+
+Plotted $Expo(1)$ PDF and CDF:
+
+![image](ExpoPDFCDF.png)
+
+Scale transformations for exponential distributions:
+If $X\sim Expo(1)$, then:
+$$
+Y = \frac{X}{Y} \sim Expo(\lambda)
+$$
+
+because
+
+$$
+P(Y \leq y) = P(X/\lambda \leq y) = P(X \leq \lambda y) = 1 - e^{\lambda y},\ y > 0.
+$$
+
+If $Y\sim Expo(\lambda)$, then $\lambda Y\sim Expo(1)$.
