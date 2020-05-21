@@ -231,3 +231,31 @@ P(Y \leq y) = P(X/\lambda \leq y) = P(X \leq \lambda y) = 1 - e^{\lambda y},\ y 
 $$
 
 If $Y\sim Expo(\lambda)$, then $\lambda Y\sim Expo(1)$.
+
+Memoryless property:
+
+If the waiting time for a certain event to occur is Exponential, your additional waiting time is still Exponential!
+
+To have a *memoryless property*, an RV $X$ should satisfy:
+
+$$
+P(X \ge s + t|X \ge t)=P(X\ge t),\ s,t>0
+$$
+
+$s$ represents time already spent on waiting, $t$ is additional time. Another way to state the memoryless property: conditional on $X \ge s$, the additional waiting time $X-s$ is still $\sim Expo(\lambda)$.
+
+Proof:
+$$
+P(X\ge s+t|X\ge s)=
+\frac{P(X\ge s+t)}{P(X\ge s)}=
+\frac{e^{-\lambda(s+t)}}{e^{-\lambda s}}=
+e^{-\lambda s}=P(X \ge t)
+$$
+
+Why then do we care about the Exponential distribution?
+
+1. Some physical phenomena, such as radioactive decay, truly do exhibit the memoryless property.
+2. The Exponential distribution is well-connected to other named distributions.
+3. The Exponential serves as a building block for more flexible distributions.
+
+## 4.6 Poisson processes
