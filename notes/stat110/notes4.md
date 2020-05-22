@@ -259,3 +259,37 @@ Why then do we care about the Exponential distribution?
 3. The Exponential serves as a building block for more flexible distributions.
 
 ## 4.6 Poisson processes
+
+Closely connected to exponential distribution! Exponential and Poisson are linked by a common story, the *Poisson process*:
+
+A process is called **Poisson process** with rate $\lambda$ if:
+
+1. The number of arrivals that occur in an interval of length $t$ is a RV $\sim Pois(\lambda t)$.
+
+2. The number of arrivals that occur in disjoint intervals are independent.
+
+Example:
+
+The arrivals are emails landing according to a Poisson process with rate $\lambda$. How many emails will arrive in one hour?
+Number of emails/hour is $\sim Pois(\lambda)$
+
+How long does it take until the fist email arrives? It will be a distribution on $(0, \infty)$. Let $T_1$ to be the time until the 1st e-mail arrives. Saying that the 1st email arrives = there's no emails arrived between $0, T_1$
+
+$$
+T_1 > t\ same\ event\ as\ N_t = 0
+$$  
+
+This is a *count-time duality* because it connects a discrete RV $N_t$ (counts) with continuous RV $T_1$ (time).
+
+So these events have same probability:
+
+$$
+P(T_1>t) = P(N_t=0) = \frac{e^{-\lambda t}(\lambda t)^0}{0!} = e^{-\lambda t}
+$$
+
+Therefore $P(T_1\leq t) = 1 - e^{-\lambda t}$, so $T_1 \sim Expo(\lambda)$!
+
+To summarize: in a Possion process of rate $\lambda$,
+
+* the number of arrivals in an interval of length $1$ is $Pois(\lambda)$.
+* the times between arrivals are IID $Expo(\lambda)$.
