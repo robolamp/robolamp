@@ -65,3 +65,63 @@ E(cX)=cE(X).
 $$
 
 Averages can be calculated in two ways, *ungrouped* or *grouped*, is all that is needed to prove linearity!
+
+It allows us to work with the distribution $X$ directly without returning to the sample space.
+
+But we can't use the same super-pebbles for another RV $Y$ on the same sample space.
+
+We can take a weighted average of the values of individual pebbles. If $X(s)$ is the value assigns to pebble $s$:
+
+$$
+E(X)=\sum_s X(s)P(\{s\}),
+$$
+
+where $P({s})$ is the weight of pebble $s$. This corresponds to the ungrouped way of taking averages! It breaks down the sample space into the smallest possible units, so we are now using the *same* weights $P(\{s\})$ for every random variable:
+
+$$
+E(Y)=\sum_s Y(s)P(\{s\}).
+$$
+
+Now we can combine $E(X)$ and $E(Y)$:
+
+$$
+E(X) + E(Y)=\sum_s X(s)P(\{s\}) + \sum_s Y(s)P(\{s\})=\\\sum_s (X+Y)(s)P(\{s\}) = E(X+Y)
+$$
+
+Using this property, we can calculate expectations for *Binomial* and *Hypergeometric* distributions!
+
+**Binomial expectation**: for $X \sim Bin(n,p)$:
+
+$$
+E(X) = \sum^n_{k=0}kP(X=k) = \sum^n_{k=0}k \binom{n}{k}p^k q^{n-k}.
+$$
+
+Linearity of expectation provides a much shorter path to the same result: RV $X$ is the sum of $n$ independent $Bern(p)$ RVs:
+
+$$
+X=I_1 + ... + I_n,
+$$
+
+each $I_j$ has $E(I_j)=1p + 0q=p$. By linearity,
+
+$$
+E(X) = E(I_1)+...E(I_n)=np.
+$$
+
+**Hypergeometric expectation**: for $X \sim HGeom(w,b,n)$:
+
+We can write $X$ as a sum of Bernoulli RVs,
+
+$$
+X=I_1 + ... + I_n,
+$$
+
+Where $I_j$ equals $1$ if jth ball is white and $0$ otherwise. By symmetry, $I_j \sim Bern(p)$, where $p=w/(w+b)$.
+
+These $I_j$ aren't independent, since balls aren't replacing. However, linearity still holds for dependent RVs. Thus,
+
+$$
+E(X)=nw/(w+b).
+$$
+
+## 5.3 Geometric and Negative Binomial
