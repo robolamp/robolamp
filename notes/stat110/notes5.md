@@ -56,3 +56,12 @@ $E(X)$ is abbreviating to $EX$, similarly $EX^2$ is $E(X^2)$ not $(E(X))^2$ !
 The order of operations here is very important!
 
 ## 5.2 Linearity of expectation
+
+The most important property of expectation is *linearity*: expected sum of RVs is the sum of expectations: $\forall X, Y$ $\forall$ constant $c$:
+
+$$
+E(X+Y)=E(X)+E(Y),\\
+E(cX)=cE(X).
+$$
+
+Averages can be calculated in two ways, *ungrouped* or *grouped*, is all that is needed to prove linearity!
