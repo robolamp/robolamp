@@ -125,3 +125,85 @@ E(X)=nw/(w+b).
 $$
 
 ## 5.3 Geometric and Negative Binomial
+
+**Geometric distribution**:
+
+A sequence of independent Bernoulli trials, each with the same success probability $p\in(0,1)$, with trials performed until a success occurs. RV $X$ is the number of failures before the first successful trial. $X$ has the Geometric distribution with parameter $p$: $X\sim Geom(p)$.
+
+Geometric PDF: If $X\sim Geom(p)$, then PMF of $X$ is:
+
+$$
+P(X=k)=q^k p
+$$
+
+for $k=0,1,2,...$ where $q=1-p$.
+
+This is a valid PMF because
+
+$$
+\sum^{\infty}_{k=0}q^k p = p\sum^{\infty}_{k=0}q^k= p\frac{1}{1-q}=1.
+$$
+
+**Warning:** In our convention, the *Geometric* distribution **excludes** the success, and the *First Success* distribution **includes** the success $Y\sim FS(p)$.
+
+If $Y \sim FS(p)$, then $Y-1\sim Geom(p)$
+
+**Geometric expectation**:
+
+By definition,
+$$
+E(X)=\sum^{\infty}_{k=0}kq^k p,
+$$
+
+where $q=1-p$. Each term looks similar to $kq^{k-1}$.
+
+$$
+\sum^{\infty}_{k=0}q^k = \frac{1}{1-q}.
+$$
+
+This series converges because $0<q<1$. Differentiating both sides,
+
+$$
+\sum^{\infty}_{k=0}k q^{k-1} = \frac{1}{(1-q)^2}.
+$$
+
+Multiply both sides by $pq$:
+
+$$
+E(X)=\sum_{k=0}^{\infty}kq^k p=pq\sum_{k=0}^{\infty}kq^{k-1}=pq\frac{1}{(1-q)^2}=\frac{q}{p}
+$$
+
+First Success expectation:
+
+$$
+E(Y)=E(X+1)=\frac{q}{p}+1=\frac{1}{p}.
+$$
+
+**Negative Binomial distribution**
+
+Sequence of independent Bernoulli trials which success probability $p$, $X$ is the number of failures before the $r$th success, $X \sim NBin$.
+
+*Binomial* counts the number of *successes* in a fixed number of *trials*, while the *Negative Binomial* counts the number of *failures* until a fixed number of *successes*.
+
+Negative Binomial PDF: If $X\sim NBin(r,p)$, then PMF of $X$ is:
+
+$$
+P(X=n)=\binom{n+r-1}{r-1}p^r q^n
+$$
+
+for $n=0,1,2,...$ where $q=1-p$.
+
+
+Theorem:
+
+If $X\sim NBin(r,p)$, We can write $X=X_1+...X_r$ were $X_i$ are IIDs $\sim Geom(p)$.
+
+**Negative Binomial expectation**:
+
+By previous theorem and linearity,
+
+$$
+E(X)=E(X_1)+...+E(X_r)=\frac{rq}{p}.
+$$
+
+## 5.4 Indicator RVs and the fundamental bridge
