@@ -207,3 +207,54 @@ E(X)=E(X_1)+...+E(X_r)=\frac{rq}{p}.
 $$
 
 ## 5.4 Indicator RVs and the fundamental bridge
+
+Indicator RVs (look at 3.3) are extremely useful tool for calculating expected values.
+
+*Indicator RV properties*: $A$ and $B$ are events.
+
+1. $(I_A)^k=I_A\ \forall\ k>0$.
+2. $I_{A^C}=1-I_A$.
+3. $I_{A\cap B}=I_A I_B$.
+4. $I_{A\cup B}=I_A + I_B - I_A I_B$.
+
+Proofs:
+
+Property 3: $I_A I_B$ if both $I_A$ and $I_B$ are 1, 0 otherwise. Property 4: $I_{A\cup B}=1-I_{A^C\cap B^C}=1-I_{A^C}I_{B^C}=1-(1-I_A)(1-I_B)=I_A + I_B - I_A I_B$
+
+**Fundamental bridge:**
+
+The probability of an event $A$ is the expected value of its indicator RV $I_A$:
+
+$$
+P(A)=E(I_A).
+$$
+
+Fundamental bridge allows to express *any* probability as an expectation. We can express a DRV as a sum of a sum of indicator RVs. Using fundamental bridge, we can find the expectation of indicators and find the expectation of original RV!
+
+## 5.5 Law of the unconscious statistician (LOTUS)
+
+$E(g(X))$ doesn't equal $g(E(X))$ if $g$ isn't linear. How to correctly calculate $E(g(X))$?
+
+**LOTUS:**
+
+If $X$ is a DRV and $g$ is a function $\mathbb{R} \rightarrow \mathbb{R}$, then:
+
+$$
+E(g(X))=\sum_x g(x)P(X=x),
+$$
+
+the sum takes over all possible values of $X$.
+
+So we need only to know PMF of $X$, not PMF of $g(X)$.
+
+Let $X$ have support $0,1,2...$ with probabilities $p_0,p_1,p_2,...$, so the PMF is $P(X=n)=p_n$, then $X^3$ as support $0^3, 1^3, 2^3, ...$ so:
+
+$$
+E(X)=\sum^{\infty}_{n=0}np_n,
+$$
+
+$$
+E(X^3)=\sum^{\infty}_{n=0}n^3p_n.
+$$
+
+## 5.6 Variance
