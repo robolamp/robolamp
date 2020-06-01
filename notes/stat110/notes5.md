@@ -258,3 +258,63 @@ E(X^3)=\sum^{\infty}_{n=0}n^3p_n.
 $$
 
 ## 5.6 Variance
+
+Important application of LOTUS is finding the *variance* of an RV.
+It tells how spread out the distribution is.
+
+**Variance** of an RV $X$:
+
+$$
+Var(X)=E(X-EX)^2.
+$$
+
+The square root of the variance is called the **standard deviation**:
+
+$$
+SD(X)=\sqrt{Var(X)}
+$$
+
+Important: when we write $E(X-EX)^2$ it is the expectation of an RV $(X-EX)^2$, **not** $(E(X-EX))^2$ which is $0$ by linearity.
+
+Why squaring? because $E(X-EX)=0$ because positive and negative deviations cancel each other. However, variation is in squared units so we need SD to receive number in correct units.
+
+Equivalent expression for variance is $Var(X)=E(X^2)-(EX)^2$.
+This expression is easier to work with sometimes.
+
+Variance properties:
+
+1. $Var(X+c)=Var(X)\ \forall\ const\ c$
+2. $Var(cX)=c^2Var(X)\ \forall\ const\ c$
+3. If RVs $X$ and $Y$ are independent, $Var(X+Y)=Var(X)+Var(Y)$. Not true in general if general if RVs are dependent.
+4. $Var(X)\ge 0$ and $0$ if and only if $P(X=c)=1$.
+
+*Geometric and Negative Binomial variance:*
+
+If $X \sim Geom(p)$, we already know that $E(X)=q/p$.
+
+$$
+Var(X)=E(X^2)-(EX)^2=\frac{q}{p^2}
+$$
+
+This is also the variance of First Success distribution.
+If an RV $X\sim NBin(r,p)$, it can be represened as a sum of $r$ IIDs $Geom(p)$ so its variance is:
+
+$$
+Var(X)=r\frac{q}{p^2}
+$$
+
+*Binomial variance:*
+
+If $X \sim Bin(n,p)$, it can be represened as sum of indicator RVs: $X=I_1+I_2+...I_n$ where $I_j$ is indicator for $j-th$ trial. Variance of each $I_j$:
+
+$$
+Var(I_j)=E(I^2_j)-(E(I_j))^2=p-p^2=p(1-p).
+$$
+
+Since the $I_j$ are independent,  
+
+$$
+Var(X)=Var(I_1)+...+Var(I_n)=np(1-p).
+$$
+
+## 5.7 Poisson
