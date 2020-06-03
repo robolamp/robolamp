@@ -318,3 +318,74 @@ Var(X)=Var(I_1)+...+Var(I_n)=np(1-p).
 $$
 
 ## 5.7 Poisson
+
+Poisson distribution is an extremely popular distribution for modeling discrete data.
+
+**Poisson distribution:**
+
+An RV $X$ has the *Poisson distribution* with parameter $\lambda$ where $\lambda > 0$ if its PMF is:
+
+$$
+P(X=k)=\frac{e^{-\lambda} \lambda^k}{k!}, k=0,1,2,...
+$$
+
+$X \sim Pois(\lambda)$.
+
+**Poisson expectation and variance:**
+
+Let $X \sim Pois(\lambda)$. Then the mean and variance are both equal to $\lambda$.
+
+$$
+E(X)=e^{-\lambda} \sum^{\infty}_{k=0}k\frac{\lambda^k}{k!}=
+e^{-\lambda} \sum^{\infty}_{k=1}k\frac{\lambda^k}{k!}=\\
+=\lambda e^{-\lambda} \sum^{\infty}_{k=1}k\frac{\lambda^{k-1}}{(k-1)!}=
+\lambda e^{-\lambda} e^{\lambda}=\lambda
+$$
+
+We dropped $k=0$ because it was $0$, then took out $\lambda$ out of sum, so inside remained a Taylor series for $e^{\lambda}$.
+
+To get the variance, let's find $E(X^2)$. By LOTUS,
+
+$$
+E(X^2)=\sum^{\infty}_{k=0} k^2 P(X=k) =
+e^{-\lambda} \sum^{\infty}_{k=0} k^2 \frac{\lambda^k}{k!}.
+$$
+
+Using the same method we used for $Geom$,
+
+$$
+E(X^2)=\lambda(1+\lambda).
+$$
+
+So the variance is:
+
+$$
+Var(X)=E(X^2)-(EX)^2=\lambda(1+\lambda) - \lambda^2=\lambda.
+$$
+
+Look at these PMF and CDF for $Pois(2)$ and $Pois(5)$! PMF of $Pois(2)$ is highly skewed, and with big $\lambda$s PMF becomes well-shapred.
+
+![image](PoisPMFCDF.png)
+
+Parameter $\lambda$ is interpreted as the rate of occurrence of these rare events!
+
+**Poisson approximation:**
+
+Let $A_1,A_2,...,A_n$ be events $p_j=P(A_j)$ where $n$ is large, the $p_j$ are small, and $A_j$ are independent. Let
+
+$$
+X=\sum^n_{j=1}I(A_j)
+$$
+
+count how many of the $A_j$ occur. Then $X$ is approximately $Pois(\lambda)$ with $\lambda=\sum^n_{j=1}p_j$.
+
+The Poisson paradigm is also called the *law of rare events*.
+(It means that $p_j$ are small).
+
+The Poisson distribution often gives *good approximations*. The Poisson is a popular model, or at least a starting point, for data whose values are nonnegative integers (called *count data* in statistics).
+
+**Sum of independent Poissons:**
+
+If $X \sim Pois(\lambda_1),Y \sim Pois(\lambda_2),$ and $X$ is independent of $Y$, then $X + Y \sim Pois(\lambda_1+\lambda_2).$
+
+## 5.8 Expectation of a continuous RV
