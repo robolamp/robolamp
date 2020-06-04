@@ -389,3 +389,75 @@ The Poisson distribution often gives *good approximations*. The Poisson is a pop
 If $X \sim Pois(\lambda_1),Y \sim Pois(\lambda_2),$ and $X$ is independent of $Y$, then $X + Y \sim Pois(\lambda_1+\lambda_2).$
 
 ## 5.8 Expectation of a continuous RV
+
+**Expectation of a continuous RV:**
+
+The *expected value* or *expectation* or *mean* of a continuous RV $X$ with PDF $f$ is:
+
+$$
+E(X)=\int^{\infty}_{-\infty}xf(x)dx.
+$$
+
+As in the discrete case, this expectation may not exist.
+
+Linearity of expectation and LOTUS also holds for continuous RV:
+
+If $X$ is a CRV with PDF $f$ and $g$ is a function $\mathbb{R} \rightarrow \mathbb{R}$,
+
+$$
+E(g(X))=\int^{\infty}_{-\infty}g(x)f(x)dx.
+$$
+
+**Mean and Var of Uniform RVs:**
+
+Let $X \sim Unif(a,b)$ So the expectation is pretty simple to find:
+
+$$
+E(U)=\int^b_a x \frac{1}{b-a}dx=\frac{1}{b-a}(\frac{b^2}{2} - \frac{a^2}{2})=\frac{a+b}{2}
+$$
+
+For the variance:
+
+$$
+E(U^2)=\int^b_a x^2 \frac{1}{b-a}dx=\frac{1}{3}\frac{b^3-a^3}{b-a}
+$$
+
+So the variance is:
+
+$$
+Var(U)=E(U^2)-(EU)^2 = \frac{1}{3}\frac{b^3-a^3}{b-a} - (\frac{a+b}{2})^2=\frac{(b-a)^2}{12}
+$$
+
+**Mean and Var of Normal RVs:**
+
+Let $X \sim \mathcal{N}(\mu,\sigma^2)$. This RV has $E(X)=\mu$ and $Var(X)=\sigma^2$.
+
+**Mean and variance of Exponential RVs:**
+
+Let's start with $X\sim Expo(1)$:
+
+$$
+E(X)=\int^{\infty}_{0}xe^{-x}dx=1.
+$$
+
+and by LOTUS,
+
+$$
+E(X^2)=\int^{\infty}_{0}x^2 xe^{-x}dx=2.
+$$
+
+So the variance is:
+
+$$
+Var(X) = E(X^2)-(EX)^2 = 1.
+$$
+
+Now $Y=X/\lambda ~\sim Expo(\lambda)$. Then,
+
+$$
+E(Y)=\frac{1}{\lambda}E(X)=\frac{1}{\lambda},
+\\
+Var(Y)=\frac{1}{\lambda^2}E(X)=\frac{1}{\lambda^2}.
+$$
+
+## 5.9 Law of Large Numbers
