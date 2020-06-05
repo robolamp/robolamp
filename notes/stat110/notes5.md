@@ -461,3 +461,36 @@ Var(Y)=\frac{1}{\lambda^2}E(X)=\frac{1}{\lambda^2}.
 $$
 
 ## 5.9 Law of Large Numbers
+
+Let $X_1,X_2,...,X_n$ are IIDs with finite mean $\mu$ and var $\sigma^2$. Let
+
+$$
+\overline{X}_n=\frac{X_1,...,X_n}{n}
+$$
+
+be sample mean of $X_1$ through $X_n$. The sample mean is also an RV with mean $\mu$ and var $\sigma^2/n$:
+
+$$
+E(\overline{X}_n)=\frac{1}{n}E(X_1+...+X_n)=
+\frac{1}{n}(E(X_1)+...+E(X_n))=\mu
+\\
+Var(\overline{X}_n)=\frac{1}{n^2}Var(X_1+...+X_n)=
+\frac{1}{n^2}(Var(X_1)+...+Var(X_n))=\frac{\sigma^2}{n}
+$$
+
+Law of large numbers (LLN) says that as $n$ grows, sample mean $\overline{X}_n \rightarrow \mu$. LLN has two versions:
+
+**Strong LLN:**
+
+The sample mean $\overline{X}_n \rightarrow \mu$ pointwise as $n \rightarrow \infty$ with probability $1$. (The event $\overline{X}_n \rightarrow \mu$ has probability $1$).
+
+**Weak LLN:**
+
+$\forall\ \epsilon > 0$, $P(|\overline{X}_n - \mu |>\epsilon)\rightarrow 0$ as $n \rightarrow \infty$ (This is *convergence in probability*)
+
+LLN is essential!
+
+Every time we use the proportion of times that something happened as an approximation to its probability, we are *implicitly appealing to LLN.*
+Every time we use the average value in the replications of some quantity to approximate its theoretical average, we are *implicitly appealing to LLN.*
+
+## 5.10 Central Limit Theorem
