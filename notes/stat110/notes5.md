@@ -494,3 +494,49 @@ Every time we use the proportion of times that something happened as an approxim
 Every time we use the average value in the replications of some quantity to approximate its theoretical average, we are *implicitly appealing to LLN.*
 
 ## 5.10 Central Limit Theorem
+
+LLN says that $n \rightarrow \infty$, $\overline{X}_n \rightarrow \mu$.  What is its distribution along this way?
+
+The Central Limit stays that for large $n$, the distribution $\overline{X}_n$ approaches to Normal distribution.
+
+**CLT:** As $n \rightarrow \infty$,
+
+$$
+\sqrt{n}\frac{\overline{X}_n - \mu}{\sigma} \rightarrow \mathcal{N}(0,1)
+$$
+
+in distribution. Or CDF approaches $\varPhi$, the CDF of $\mathcal{N}(0,1)$. It has asymptotic result, but also suggests an approximation for the distribution of $\overline{X}_n$ when $n$ is a large finite number.
+
+For large $n$, the distribution of $\overline{X}_n$ is approximately $\mathcal{N}(\mu,\sigma^2/n)$.
+
+This result is very general: the distribution of $X_j$ can be *anything in the world* as long as it has finite variance and mean.
+Example how CLT works for different distributions:
+
+![image](CLT.png)
+
+As you may notice, it doesn't mean that the distribution of $X_j$ is irrelevant: if $X_j$ has highly skewed or multimodel distribution, we may need very large $n$.
+
+The sum $W_n=X_1+...+X_n= n\overline{X}_n$. So the CLT also implies that $W_n$ is also Normal. The CLT then states that for large $n$,
+
+$$
+W_n \sim \mathcal{N}(n\mu,n\sigma^2).
+$$
+
+This also can be useful!
+
+**Poisson convergence to Normal:**
+
+Let $Y\sim Pois(n)$. We can consider $Y$ to be sum of $n$ IID $Pois(1)$ RVs. Therefore, for large $n$:
+
+$$
+Y\sim \mathcal{N}(n, n).
+$$
+
+**Binomial convergence to Normal:**
+
+Let $Y \sim Bin(n,p)$, we consider $Y$ to be a sum of $n$ IID $Bern(p)$
+RVs. Therefore, for large $n$:
+
+$$
+Y \sim \mathcal{N}(np, np(1-p)).
+$$
