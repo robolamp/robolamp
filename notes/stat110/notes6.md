@@ -33,3 +33,18 @@ p_{XY}(x,y)=P(X = x,Y = y)
 $$
 
 analogously for joint PMF of $n$ RVs.
+
+We require valid joint PMF to be nonnegative and sum to $1$:
+
+$$
+\sum_x \sum_y P(X=x, Y=y)=1.
+$$
+
+**Marginal PMF:**
+For discrete RVs $X$ and $Y$, the *marginal PMF* of $X$ is:
+
+$$
+P(X=x)=\sum_y P(X=x, Y=y)
+$$
+
+The operation of summering over the possible values of $Y$ in order to convert the joint PMF to marginal PMF is *marginalizing* out of $Y$.
