@@ -48,3 +48,50 @@ P(X=x)=\sum_y P(X=x, Y=y)
 $$
 
 The operation of summering over the possible values of $Y$ in order to convert the joint PMF to marginal PMF is *marginalizing* out of $Y$.
+
+Now: we observe the value of $X$ and want to update the distribution of $Y$ using this information. Using the marginal PMF isn't good idea because it doesn't take into account any info about $X$. Instead,
+
+**Conditional PMF:**
+
+$$
+P(Y=y|X=x)= \frac{P(X=x, Y=y)}{P(X=x)}.
+$$
+
+Where $x$ is the observed value of $X$.
+The conditional PMF $P(Y=y|X=x)$ is obtained by renormalizing the column of the joint PMF that is compatible with the event $X=x$.
+
+![image](conditionalPMF.png)
+
+We can also obtain the conditional distribution using Bayes' rule:
+
+$$
+P(Y=y|X=x)=\frac{P(X=x|Y=y)P(Y=y)}{P(X=x)}.
+$$
+
+Using LOTP, we have another way to get the marginal PMF:
+
+$$
+P(X=x)=\sum_y P(X=x|Y=y)P(Y=y)
+$$
+
+Now we can revisit the definition of **independence**:
+
+RVs $X$ and $Y$ are *independent* if $\forall x, y$,
+
+$$
+F_{X,Y}(x,y)=F_X(x)F_Y(y).
+$$
+
+If $X$ and $Y$ are discrete, it is equivalent to:
+
+$$
+P(X=x,Y=y)=P(X=x)P(Y=y)
+$$
+
+$\forall x, y$ and it is also equivalent to:
+
+$$
+P(Y=y|X=x)=P(Y=y)
+$$
+
+$\forall y$ and $\forall x$ such that $P(X=x)>0$.
