@@ -95,3 +95,66 @@ P(Y=y|X=x)=P(Y=y)
 $$
 
 $\forall y$ and $\forall x$ such that $P(X=x)>0$.
+
+For independent RVs, the *joint CDF* factors into the product of the *marginal CDFs*, or that the *joint PMF* factors into the product of the *marginal PMFs*.
+
+Another way of looking at independence: *all the conditional PMFs* are the same as the *marginal PMFs*. In other words, starting with marginal PMF of $Y$, no updating is necessary when we condition on $X=x$, regardless of $x$. There is no event involving $X$ that influences our distribution of $Y$.
+
+### Continuous joint CDF, PDF:
+
+In order for $X$ and $Y$ to have a continuous joint distribution, we require that the joint CDF is:
+
+$$
+F_{X,Y}=P(X\le x, Y\le y)
+$$
+
+be differentiable with respect to $x$ and $y$. The partial derivative with respect to $x$ and $y$ is called *the joint PDF*.
+
+**Joint PDF:**
+
+If $X$ and $Y$ are continuous with joint CDF $F_{X,Y}$, their joint PDF is:
+
+$$
+f_{X,Y}(x,y)= \frac{\partial^2}{\partial x \partial y}F_{X,Y}(x,y).
+$$
+
+As usual, we require valid joint PDFs to be nonnegative and integrate to 1.
+
+How joint PDF of two RVs looks like:
+
+![image](jointPDFlabeled.png)
+
+**Marginal PDF:**
+
+In continuous case, we get the marginal PDF of $X$ by integrating over all possible values of $Y$:
+
+For continuous RVs $X$ and $Y$ with joint PDF $f_{X,Y}$, the *marginal PDF* of $X$ is
+
+$$
+f_{X}(x)=\int^{\infty}_{-\infty}f_{X,Y}(x,y)dy
+$$
+
+If number of RVs is bigger, we can do the same, for example for four RVs $X,Y,Z,W$ if we need the joint PDF of $X,W$:
+
+$$
+f_{X,W}(x, w)=\int^{\infty}_{-\infty}\int^{\infty}_{-\infty}
+f_{X,Y,Z,W}(x, y, z, w)dydz.
+$$
+
+Computing the integral may be difficult!
+
+How to update our distribution for $Y$ after observing the value of $X$ using the *conditional PDF*?
+
+**Conditional PDF:**
+
+For continuous RVs $X$ and $Y$ with joint PDF $f_{X,Y}$, the *conditional PDF* of $Y$ given $X=x$ is
+
+$$
+f_{Y|X}(y|x)=\frac{f_{X,Y}(x,y)}{f_X(x)}.
+$$
+
+this is considered as a function of $y$ for fixed $x$.
+
+The conditional PDF $f_{Y|X}(y|x)$ is obtained by renormalizing the slice of the joint PDF at the fixed value $x$:
+
+![image](conditionalPDF.png)
