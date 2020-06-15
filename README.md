@@ -1,7 +1,7 @@
 # Welcome to my CV
 TL; DR: I am software engineer with major experience in roboics and self-driving cars.
 
-You can read my CV here: [link to CV](https://github.com/robolamp/about_robolamp/blob/master/my_cv_eng.pdf "My CV in English")
+You can read my full CV here: [link to CV](https://github.com/robolamp/about_robolamp/blob/master/my_cv_eng.pdf "My CV in English")
 
 Less formal info on my personal [website](https://kotobank.ch/~robolamp/)
 
@@ -21,7 +21,7 @@ Presented at [WTM Moscow](https://gdgmoscow.timepad.ru/event/1101498/)
 
 **Data mining in Yandex Self-Driving Cars**
 
-A short talk in Russian about data processing pipeline in Yandex Self-Driving Car project 
+A short talk in Russian about data processing pipeline in Yandex Self-Driving Car project
 
 Presented at [Pytup Moscow](https://events.yandex.ru/events/pytup-26-02-2020)
 
@@ -35,6 +35,6 @@ Fake JS-based UNIX term for my personal page and for fun!
 
 **Random three body problem bot**
 
-A program which is simulating the behaviour of random three body system multiple times and publishing animation of the most interesting one every two hours at [Telegram channel](https://t.me/random_three_body_problem).
+A program which is simulating the behavior of random three body system multiple times and publishing animation of the most interesting one every 12 hours at [Telegram channel](https://t.me/random_three_body_problem).
 
 [Link to repo](https://github.com/robolamp/3_body_problem_bot)
