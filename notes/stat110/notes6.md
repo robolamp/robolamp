@@ -158,3 +158,78 @@ this is considered as a function of $y$ for fixed $x$.
 The conditional PDF $f_{Y|X}(y|x)$ is obtained by renormalizing the slice of the joint PDF at the fixed value $x$:
 
 ![image](conditionalPDF.png)
+
+We can recover joint PDF $f_{X,Y}$ if we have conditional PDF $f_{Y|X}$:
+
+$$
+f_{X,Y}=f_{Y|X}(y|x)f_X(x),
+$$
+
+similarly for $f_{X|Y}$:
+
+$$
+f_{X,Y}=f_{X|Y}(x|y)f_Y(y).
+$$
+
+So we can develop Bayes' rule and LOTP for continuous case:
+
+**Continuous form of Bayes' rule and LOTP**
+
+For continuous RVs $X$ and $Y$,
+
+$$
+f_{Y|X}(y|x)=\frac{f_{X|Y}(x|y)f_Y(y)}{f_X(x)}, \\
+f_X(x)=\int^{\infty}_{-\infty}f_{X|Y}(x|y)f_Y(y)dy.
+$$
+
+We now have versions of Bayes' rule and LOTP for two discrete RVs and for two continuous RVs, so we can create Bayes' rule and LOTP for different mixes of RVs.
+
+Bayes' rule for continuous $X$ and discrete $Y$:
+
+$$
+P(Y=y|X=x)=\frac{f_X(x|Y=y)P(Y=y)}{f_X(x)};
+$$
+
+Bayes' rule for discrete $X$ and continuous $Y$:
+
+$$
+f_Y(y|X=x)=\frac{P(X=x|Y=y)f_y(y)}{P(X=x)}.
+$$
+
+LOTP for continuous $X$ and discrete $Y$:
+
+$$
+f_X(x)=\sum_y f_X(x|Y=y)P(Y=y);
+$$
+
+LOTP for discrete $X$ and continuous $Y$:
+
+$$
+P(X=x)=\int^{\infty}_{-\infty} P(X=x|Y=y)f_Y(y)dy.
+$$
+
+Finally, we can define the independence for continuous RVs:
+
+**Independence of continuous RVs:**
+
+RVs $X$ and $Y$ are *independent* if $\forall x,y$
+
+$$
+F_{X,Y}(x,y)=F_X(x)F_Y(y),
+$$
+
+if $X$ and $Y$ are continuous with joint PDF $f_{X,Y}$, this is equivalent to:
+
+$$
+f_{X,Y}(x,y)=f_X(x)f_Y(y),
+$$
+
+$\forall x,y$, this is also equivalent to:
+
+$$
+f_{X|Y}(y|x)=f_Y(x)
+$$
+
+$\forall y, x$ such that $f_X(x)>0$.
+
+## 6.2 Covariance and correlation.
