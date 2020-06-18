@@ -233,3 +233,96 @@ $$
 $\forall y, x$ such that $f_X(x)>0$.
 
 ## 6.2 Covariance and correlation.
+
+Roughly speaking, covariance measures of two RVs to go up or down together, relative to their expected values.
+
+**Covariance**
+
+The *covariance* between RVs $X$ and $Y$ is
+
+$$
+Cov(X,Y)=E((X-EX)(Y-EY)).
+$$
+
+Multiplying this out and using linearity,
+
+$$
+Cov(X,Y)=E(XY)-E(X)E(Y).
+$$
+
+If $X$ and $Y$ tend to move in the same direction, then $X-EX$ and $Y-EY$ are both positive or both negative, and we receive a positive covariance.
+
+If $X$ and $Y$ are independent, their covariance is zero. RVs with zero covariance are *uncorrelated*.
+
+Examples:
+
+![image](corrscatterplots.png)
+
+**Properties of covariance:**
+
+1. $Cov(X,X)=Var(X)$
+2. $Cov(X,Y)=Cov(Y,X)$
+3. $Cov(X,c)=0\ \forall const\ c$
+4. $Cov(aX,Y)=aCov(X,Y)\ \forall const\ a$
+5. $Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)$
+6. $Cov(X+Y,Z+W)=Cov(X,Z)+Cov(X,W)+\\+Cov(Y,Z)+Cov(Y,W)$
+7. $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
+8. For $n$ RVs $X_1,...,X_n$,
+
+$$
+Var(X_1+...+X_n)=Var(X_1)+...+Var(X_n)+2\sum_{i<j}Cov(X_i,X_j).
+$$
+
+Correlation is a unitless version of covariance:
+
+**Correlation**
+
+The *correlation* between RVs $X$ and $Y$ is:
+
+$$
+Corr(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}.
+$$
+
+Undefined if $Var(X)=0$ or $Var(Y)=0$.
+
+Shifting and scaling $X$ and $Y$ has no effect on their correlation:
+
+$$
+Corr(cX,Y)=\frac{Cov(cX,Y)}{\sqrt{Var(cX)Var(Y)}}=
+\frac{cCov(X,Y)}{\sqrt{c^2Var(X)Var(Y)}}=Corr(X,Y).
+$$
+
+$\forall$ RVs $X$ and $Y$,
+
+$$
+-1 \leq Corr(X,Y) \leq 1.
+$$
+
+**Hypergeometric variance:**
+
+Let $X\sim HGeom(w,b,n)$. $Var(X)=?$
+
+RV $X$ is a sum of indicator RVs, $X=I_1+...+I_n$. Each $I_j$ has mean $p=w/(w+b)$ and var $p(1-p)$. Let's apply properties of covariance:
+
+$$
+Var(X)=Var(\sum^n_{j=1}I_j)=Var(I_1)+...+Var(I_n)+\\
++2\sum_{i<j}Cov(I_i,I_j)=np(1-p)+2\binom{n}{2}Cov(I_1,I_2).
+$$
+
+all $\binom{n}{2}$ pair of $I_j$ have the same covariance by symmetry. By the definition,
+
+$$
+Cov(I_1,I_2)=E(I_1,I_2)-E(I_1)E(I_2)=\\
+P(1st\ and\ 2nd\ white)-P(1st\ white)P(2nd\ white)=\\
+\frac{w}{w+b}\frac{w-1}{w+b-1}-p^2.
+$$
+
+Now we can obtain:
+
+$$
+Var(X)=\frac{w+b-n}{w+b-1}bp(1-p).
+$$
+
+## 6.3 Multinomial distribution
+
+The Multinomial distribution is a generalization of the Binomial.
