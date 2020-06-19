@@ -326,3 +326,78 @@ $$
 ## 6.3 Multinomial distribution
 
 The Multinomial distribution is a generalization of the Binomial.
+
+Objects are places into category $j$ with probability $p_j$ where $p_j > 0$ and $\sum^k_{j=1}p_j=1$. Let $X_1$ be number of objects in category $1$, $X_j$ in $j$, so $\sum^k_{j=1}X_j=n$.
+Then $\textbf{X}=(X_1,...X_j)$ has the *Multinomial distribution*
+$\textbf{X} \sim Mult_k(n, \textbf{p})$ with params $n, \textbf{p}=(p_1,...p_k)$.
+
+$\textbf{X}$ is a *random vector*!
+
+**Multinomial joint PMF**
+
+If $\textbf{X} \sim Mult_k(n, \textbf{p})$, then the joint PMF of $\textbf{X}$ is:
+
+$$
+P(X_1=n_1,...,X_k=n_k)=\frac{n!}{n_1!n_2!...n_k!}
+p_1^{n_1}p_2^{n_2}...p_k^{n_k}.
+$$
+
+and $n_1+...+n_k=n$
+
+**Multinomial magrnials**
+
+If $\textbf{X} \sim Mult_k(n, \textbf{p})$, then $X_j \sim Bin(n,p_j)$.
+
+Another property of the Multinomial distribution:
+
+**Multinomial lumping:**
+
+If $\textbf{X} \sim Mult_k(n, \textbf{p})$, then $\forall i,j,\ i \neq j$, then $X_i + X_j \sim Bin(n,p_i + p_j)$.
+
+The random vector of counts obtaining by merging $i$ and $j$ is still Multinomial. For example for $1$ and $2$:
+
+$$
+(X_1 + X_2,X_3,...,X_k)\sim Mult_{k-1}(n(p_1+p_2,p_3,...,p_k)).
+$$
+
+**Covariance in Multinomial:**
+
+Let $(X_1,...,X_k)\sim Mult_{k-1}(n, \textbf{p})$.
+For $i \neq j$,
+
+$$
+Cov(X_i,X_j)=-np_i p_j.
+$$
+
+## 6.4 Multivariate Normal
+
+The Multivariate Normal (MVN) generalizes the Normal distribution into higher dimensions.
+
+**Multivariate Normal distribution:**
+
+A random vector $\textbf{X}=(X_1,...,X_k)$ has *Multivariate Normal distribution* (MVN) if every linear combination of $X_j$ has a Normal distribution:
+
+$$
+t_1 X_1+...+t_k X_k \sim \mathcal{N}
+$$
+
+$\forall t_1,...,t_k$.
+
+Important case is $k=2$: this distribution is *Bivariate Normal* (BVN)
+
+**Example: Not a MVN**
+
+Let $X \sim \mathcal{N}(0,1)$, and let $S=1$ with $P=0.5$ and $S=-1$ with $P=0.5$ be a random sign independent of $X$. Then $Y=SX$ is a standard Normal RV. However, $(X,Y)$ is not Bivariate Normal because $P(X+Y=0)=P(S=-1)=1/2$ which implies that $X+Y$ can't be Normal. Since $X+Y$ is a linear combination of $X$ and $Y$ that is not Normally distributied, $(X,Y)$ is not BVN.
+
+**Example: Actual MVN**
+
+For $Z,W\sim^{i.i.d.} \mathcal{N}(0,1)$, $(Z, W)$ is BVN.
+Also $(Z+2W,3Z+5W)$ is BVN too.
+
+**Property:**
+
+If $(X_1,X_2,X_3)$ is MVN, then subvector is $(X_1,X_2)$ MVN too.
+
+**Property:**
+
+If $\textbf{X}=(X_1,...,X_n)$ and $\textbf{Y}=(Y_1,...,Y_n)$ are independent MVN vectors, a concatenated random vector $\textbf{W}=(X_1,...,X_n,Y_1,...,Y_n)$ is MVN.
