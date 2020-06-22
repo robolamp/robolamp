@@ -401,3 +401,26 @@ If $(X_1,X_2,X_3)$ is MVN, then subvector is $(X_1,X_2)$ MVN too.
 **Property:**
 
 If $\textbf{X}=(X_1,...,X_n)$ and $\textbf{Y}=(Y_1,...,Y_n)$ are independent MVN vectors, a concatenated random vector $\textbf{W}=(X_1,...,X_n,Y_1,...,Y_n)$ is MVN.
+
+Parameters of MVN random vector $(X_1,...X_k)$ are the following:
+
+* the *mean vector* $(\mu_1,...\mu_k)$ where $E(X_j)=\mu_j$
+* the *covariance matrix* which is $k \times k$ matrix of covariances between components.
+
+And for BVN $(X, Y)$ we need to know 5 parameters:
+
+* the means $E(X), E(Y);$
+* the vars $Var(X), Var(Y);$
+* the correlation $Corr(X, Y);$
+
+Example: BVN with $Corr(X, Y)=0$ vs BVN with $Corr(X, Y)=0.75$:
+
+ ![image](BVN.png)
+
+**Property:**
+
+Within an MVN random vector, uncorrelated implies independent.
+
+For example, if $(X, Y)$ is BVN and $Corr(X,Y)=0$, then $X$ and $Y$ are independent.
+
+## 6.5 Conditional expectation
