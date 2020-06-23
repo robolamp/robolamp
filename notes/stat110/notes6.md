@@ -424,3 +424,88 @@ Within an MVN random vector, uncorrelated implies independent.
 For example, if $(X, Y)$ is BVN and $Corr(X,Y)=0$, then $X$ and $Y$ are independent.
 
 ## 6.5 Conditional expectation
+
+Conditional expectation is expectation with conditional probability in terms of probability.
+
+Two notions of conditional expectation:
+
+* *Conditional expectation* $E(Y|A)$ given an event $A$. If we learn that $A$ occurred, updated expectation of $Y$ is computed analogously to $E(Y)$.
+* *Conditional expectation* $E(Y|X)$ given an random variable $X$. $E(Y|X)$ is the RV that best predicts $Y$ using only the information available from $X$.
+
+For discrete RV $Y$, the definition of $E(Y|A)$ replaces the probability $P(Y=y)$ with conditional probability $P(Y=y|A)$.
+
+For continuous RV $Y$, the definition of $E(Y|A)$ replaces the PDF $f(y)$ with conditional probability PDF $f(y|A)$.
+
+**Conditional expectation given an event:**
+
+Let $A$ be an event with $P(A)>0$ If $Y$ is a discrete RV, then the *condition expectation of $Y$ given* $A$ is:
+
+$$
+E(Y|A)=\sum_y yP(Y=y|A)
+$$
+
+sum over support of $y$. If $Y$ is continuous RV with PDF $f$:
+
+$$
+E(Y|A)=\int^{\infty}_{-\infty}yf(y|A)dy
+$$
+
+where conditional PDF $f(y|A)$ is the derivative of conditional CDF $F(y|A)=P(Y\leq y|A)$ computed by Bayes' rule:
+
+$$
+f(y|A)=\frac{P(A|Y=y)f(y)}{P(A)}.
+$$
+
+**Warning:**
+
+Confusing conditional expectation and unconditional expectation is a dangerous mistake!
+
+**Law of total expectation (LOTE):**
+
+$A_1,...,A_n$ is a partition of a sample space, with $P(A_j)>0\ \forall i$, and $Y$ is a RV on this sample space. Then
+
+$$
+E(Y)=\sum_{i=1}^n E(Y|A_i)P(A_i).
+$$
+
+Since all probabilities are expectations by the fundamental bridge, LOTP is a special case of LOTA. Let $Y=I_B$ for event $B$, then
+
+$$
+P(B)=E(I_B)=\sum_{i=1}^n E(I_B|A_i)P(A_i)=\sum_{i=1}^n E(B|A_i)P(A_i).
+$$
+
+which is LOTP!
+
+The law of total expectation is, in turn, a special case of a major result called *Adam's law*.
+
+## 6.6 Conditional expectation given a random variable
+
+$E(Y|X)$ is a random variable that is, in a certain sense, our best prediction of $Y$, assuming we get to know $X$.
+
+If $Y$ is discrete, we use use the conditional PMF $P(Y=y|X=x)$ in place of conditional PMF $P(Y=y)$:
+
+$$
+E(Y|X=x)=\sum_y yP(Y=y|X=x).
+$$
+
+If $Y$ is continuous, we use conditional PDF:
+
+$$
+E(Y|X=x)=\int^{\infty}_{-\infty}yf_{Y|X}(y|x)dy.
+$$
+
+Notice that $E(Y|X=x)$ is a function of $x$ only. Therefore,
+
+**Conditional expectation given an RV:**
+
+Let $g(x)=E(Y|X=x)$. Then the conditional expectation of $Y$ given $X$ $E(Y|X)$ is defined to be the RV $g(X)$. If after experiment $X$ crystallized into $x$, $E(Y|X)$ crystallizes into $g(x)$.
+
+**Warning 1:**
+
+This definition doesn't say $g(x)=E(Y|X=x)$ then $g(X)=E(Y|X=X)$ which equals $E(Y)$ because $X=X$ is always true.
+
+**Warning 2:**
+
+We should always keep in mind that $E(Y|A)$ are numbers, while $E(Y|X)$ are RVs.
+
+## 6.7 Adam's law and other properties of conditional expectation
