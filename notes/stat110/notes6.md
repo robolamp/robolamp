@@ -517,3 +517,76 @@ We should always keep in mind that $E(Y|A)$ are numbers, while $E(Y|X)$ are RVs.
 * Linearity: $E(Y_1 + Y_2|X)=E(Y_1|X)+E(Y_2|X)$ and $E(cY|X)=cE(Y|X)$ $\forall$ const $c$.
 * Adam's law: $E(E(Y|X))=E(Y)$.
 * Projection interpolation: the RV $Y-E(Y|X)$ which is called the *residual* from using $X$ to predict $Y$, is uncorrelated with $h(X)$ $\forall$ func $h$.
+
+Adam's law: $\forall$ RVs $X$ and $Y$,
+
+$$
+E(E(Y|X))=E(Y).
+$$
+
+Why? Let $E(Y|X)=g(X)$. We can apply LOTUS,
+
+$$E(g(X))=\sum_x g(x)P(X=x)=\\
+=\sum_x (\sum_y y P(Y=y|X=x))P(X=x)=\\
+=\sum_x \sum_y P(X=x) P(Y=y|X=x)=\\
+=\sum_y y \sum_x P(X=x,Y=y)=\sum_y y P(Y=y)=E(Y).
+$$
+
+Adam's law is more general version of LOTE. For discrete $X$,
+
+$$
+E(Y)=\sum_x E(Y|X=x)P(P=x)
+$$
+
+and
+
+$$
+E(Y)=E(E(Y|X))
+$$
+
+mean the same thing.
+
+The projection interpretation of conditional expectation implies that $E(Y|X)$ is the **best predictor** of $Y$ based on $X$, in the sense that it is the function of $X$ with the lowest *mean squared error* (expected squared difference between $Y$ and the prediction of $Y$).
+
+**Example: Linear regression**
+
+It is extremely widely used method for data analysis in statistics. In its most basic form, LR uses an RV $X$ to predict response variable $Y$, and it assumes that unconditional expectation of $Y$ is linear in $X$:
+
+$$
+E(Y|X)=a+bX
+$$
+
+equivalently,
+
+$$
+Y=a+bX+\epsilon
+$$
+
+where $\epsilon$ is RV called *error* with $E(\epsilon|X)=0$.
+
+What's constants $a,b$ in terms of $E(X),E(Y),Cov(X,Y),Var(X)$? By Adams's law, expectation of both sides:
+
+$$
+E(Y)=a+bE(X)
+$$
+
+because $E(\epsilon)=E(E(\epsilon|X))=0$ by definition. And
+
+$$
+E(\epsilon X)=E(E(\epsilon X|X)) =E(XE(\epsilon |X))=E(0)=0.
+$$
+
+and contrivances of both sides of $Y=a+bX+\epsilon$, we have
+
+$$
+Cov(X,Y)=Cov(X,a)+bCov(X,X)+Cov(X,\epsilon)=bVar(X).
+$$
+
+Then,
+
+$$
+b=\frac{Cov(X,Y)}{Var(X)},\\
+a=E(Y)-bE(X).
+$$
+
+## 6.8 Eve's law and conditional variance
