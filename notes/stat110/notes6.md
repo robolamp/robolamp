@@ -509,3 +509,11 @@ This definition doesn't say $g(x)=E(Y|X=x)$ then $g(X)=E(Y|X=X)$ which equals $E
 We should always keep in mind that $E(Y|A)$ are numbers, while $E(Y|X)$ are RVs.
 
 ## 6.7 Adam's law and other properties of conditional expectation
+
+**Properties of conditional expectation:**
+
+* Dropping independent: if $X$, $Y$ are independent, $E(Y|X)=E(Y)$.
+* Taking out what's known: $\forall$ func $h$, $E(h(X)Y|X)=h(X)E(Y|X)$.
+* Linearity: $E(Y_1 + Y_2|X)=E(Y_1|X)+E(Y_2|X)$ and $E(cY|X)=cE(Y|X)$ $\forall$ const $c$.
+* Adam's law: $E(E(Y|X))=E(Y)$.
+* Projection interpolation: the RV $Y-E(Y|X)$ which is called the *residual* from using $X$ to predict $Y$, is uncorrelated with $h(X)$ $\forall$ func $h$.
