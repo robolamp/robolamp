@@ -590,3 +590,44 @@ a=E(Y)-bE(X).
 $$
 
 ## 6.8 Eve's law and conditional variance
+
+*The conditional variance* of $Y$ given $X$ is:
+$$
+Var(Y|X)=E((Y-E(Y|X))^2|X)
+$$
+
+which is equivalent to:
+
+$$
+Var(Y|X)=E(Y^2|X)-(E(Y|X))^2
+$$
+
+$Var(Y|X)$ is RV and function of $X$.
+
+**Eve's law:**
+
+$\forall$ RVs $X$ and $Y$,
+
+$$
+Var(Y)=E(Var(Y|X))+Var(E(Y|X)).
+$$
+
+Proof: let $g(X)=E(Y|X)$. By Adam's law, $E(g(X))=E(Y)$.
+
+$$
+E(Var(Y|X))=E(E(Y^2|X) - g(X)^2)=E(Y^2)-E(g(X)^2),
+$$
+
+and
+
+$$
+Var(E(Y|X))=E(g(X)^2) - (Eg(X))^2=E(g(X)^2)-(EY)^2.
+$$
+
+then
+
+$$
+E(Var(Y|X))+Var(E(Y|X))=E(Y^2)-(EY)^2=Var(Y)
+$$
+
+$\underline{ЧТД}.$
