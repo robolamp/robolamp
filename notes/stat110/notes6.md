@@ -631,3 +631,16 @@ E(Var(Y|X))+Var(E(Y|X))=E(Y^2)-(EY)^2=Var(Y)
 $$
 
 $\underline{ЧТД}.$
+
+
+If each person in population has a value $X$ and a value of $Y$. If we will group them using values of $X$. So $$*within-group variation:* $E(Var(Y|X))$.
+
+Across age groups, the average heights are different. The variance of average heights across age groups is *between-group variation:* $Var(E(Y|X))$.
+
+**Warning:**
+
+RV $Y$ and event $A$. Expression $Var(Y)=Var(Y|A)P(A)+Var(Y|A^C)P(A^C)$ is wrong even though is seems similar to LOTE. Instead, let's use Eve's law and IRV $I$:
+
+$$
+Var(Y)=E(Var(Y|I))+Var(E(Y|I)).
+$$
