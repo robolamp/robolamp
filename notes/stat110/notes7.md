@@ -31,3 +31,5 @@ $P(X_{n+1}=j|X_n=j)$ is called the *transition probability.* from state $i$ to s
 **Translation matrix**
 
 Let $X_0, X_1, X_2, ...$ be a Markov chain $\{1, 2,...,M\}$ and let $q_{ij}=P(X_{n+1}=j|X_n=i)$ be transition probability from state $i$ to state $j$. The matrix $Q=(q_{ij})$ is the *transition matrix* of the chain. $Q$ is nonnegative and each row sums to $1$.
+
+**Example: Rainy-sunny Markov chain**
