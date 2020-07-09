@@ -72,3 +72,20 @@ q^{(n)}_{ij} = \sum_k q_{ik}q_{kj}.
 $$
 
 The $n$-th power of the transition matrix gives the $n$-step transition probabilities $q^{(n)}_{ij}$ is the $(i,j)$-th entry of $Q^n$.
+
+**Marginal distribution of X_n**
+
+Let $\mathbf{t}=(t_1, t_2, ...)$ where $t_i=P(X_0=i)$ and $\mathbf{t}$ is a row vector. Then *the marginal distribution* of $X_n$ is given by the vector $\mathbf{t}Q^n$ is $P(X_n=j)$.
+
+Proof:
+
+By LOTA, conditioning on $X_0$, the probability that the chain is at $j$-th state after $n$ steps is:
+
+$$
+P(X_n=j)=\sum^M_{i=1}P(X_0=i)P(X_n=j|X_0=i)=\\
+=\sum^M_{i=1}t_i q_{ij}^{(n)}
+$$
+
+which is the $j$th component of $\mathbf{t}Q^n$.
+
+## 7.2 Classification of states
