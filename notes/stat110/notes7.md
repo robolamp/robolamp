@@ -89,3 +89,12 @@ $$
 which is the $j$th component of $\mathbf{t}Q^n$.
 
 ## 7.2 Classification of states
+
+States may be *recurrent* or *transient*. Recurrent ones will be visited over and over again in the long one while transient ones will be constantly abandoned.
+
+Also states may be classified using their *period* which is a possible integer summarizing the amount of time that can be elapsed between visits to this state.
+
+**Recurrent and transient states:**
+
+State $i$ of a Markov chain is recurrent if starting from $i$, the $P=1$ that the chain will return to $i$.
+The state $i$ is transient if the chain starts from $i$ there is $P>0$ that the chain will never return to $i$.
