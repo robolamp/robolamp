@@ -127,3 +127,42 @@ Examples:
 Left: aperiodic Markov chain
 
 Right: periodic Markov chain with states $1,2,3$ with period $3$.
+
+## 7.3 Stationary distribution
+
+What fraction of time will it spend in each recurrent of states? This question is answered by *stationary distribution* a.k.a. *steady-state distribution*.
+
+**Stationary distribution:**
+
+A row vector $\mathbf{s}=(s_1,...,s_M)$ such that $s_i \geq 0$ and $\sum_i s_i=1$ is a *stationary distribution* for a Markov chain with transition matrix $Q$ if:
+
+$$
+\sum_i s_i q_{ij}=s_j
+$$
+
+$\forall\ j$, or equivalently,
+
+$$
+\mathbf{s}Q=\mathbf{s}.
+$$
+
+If $\mathbf{s}$ is the distribution of $X_0$, then $\mathbf{s}Q$ is the marginal distribution of $X_1$. But the equation $\mathbf{s}Q=\mathbf{s}$ means that $X_1$ has the distribution $\mathbf{s}$. Same for $X_2$, $X_3$, etc.
+
+Properties:
+
+**Existence and uniqueness:**
+
+Any irreducible Markov chain has a unique stationary distribution.
+In this distribution, every state has a positive probability.
+
+**Convergence:**
+
+Let $X_0, X_1,...$ be a Markov chain with a stationary distribution $\mathbf{s}$ and transition matrix $Q$, such that some power $Q^m$ is positive in all entries. Then $P(X_n=i)$ converges to $s_i$ as $n \rightarrow \infty$. In terms of transition matrix, $Q^n$ converges to $\mathbf{s}$ in each row.
+
+**Expected time to return:**
+
+Let $X_0, X_1,...$ be a Markov chain with a stationary distribution $\mathbf{s}$. Let $r_i$ be the expected time it takes the chain to return to $i$, given that it starts at $i$. Then, $s_i=1/r_i$.
+
+Example of usage: Google PageRank. Founders of Google modeled web-surfing as Markov chain and then used its stationary distribution to rank the relevance of webpages.
+
+## 7.4 Reversibility
