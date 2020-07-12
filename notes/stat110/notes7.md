@@ -98,3 +98,32 @@ Also states may be classified using their *period* which is a possible integer s
 
 State $i$ of a Markov chain is recurrent if starting from $i$, the $P=1$ that the chain will return to $i$.
 The state $i$ is transient if the chain starts from $i$ there is $P>0$ that the chain will never return to $i$.
+
+As long as there is a positive probability of leaving $i$ forever, the chain eventually will leave $i$ forever!
+
+If $i$ is a transient state of a Markov chain,
+and the probability of never returning to $i$ starting from $i$ is a positive number $p > 0$.
+Then the number of returns to $i$ before leaving it forever is $\sim Geom(p)$.
+
+**Irreducible and reducible chain:**
+
+A Markov chain with transition matrix $Q$ is *irreducible* if for $\forall$ $i,j$ it is possible to go from $i$ to $j$ in a finite number of steps with $P>0$. So $\forall$ $i,j$
+there is integer $n>0$ that $(i,j)$-th entry of $Q^n$ is positive.
+
+Not *irreducible* Markov chain is *reducible*.
+
+In an irreducible Markov chain with a finite state space, all states are recurrent.
+
+**Period of a state, periodic and aperiodic chain:**
+
+The *period* of a state $i$ in a Markov chain is the greatest common divisor (gcd) of the possible numbers of steps it can take to return to $i$ when starting at $i$. The period of $i$ is the greatest common divisor of numbers $n$ such that $(i,j)$-th entry of $Q^n$ is positive.
+
+A state is called *aperiodic* if period $=1$ and *periodic* otherwise. The chain is *aperiodic* of all the states are *aperiodic*, and *periodic* otherwise.
+
+Examples:
+
+![image](periodic_aperiodic_markov_chains.png)
+
+Left: aperiodic Markov chain
+
+Right: periodic Markov chain with states $1,2,3$ with period $3$.
