@@ -166,3 +166,29 @@ Let $X_0, X_1,...$ be a Markov chain with a stationary distribution $\mathbf{s}$
 Example of usage: Google PageRank. Founders of Google modeled web-surfing as Markov chain and then used its stationary distribution to rank the relevance of webpages.
 
 ## 7.4 Reversibility
+
+Stationary distribution is useful for understanding long-run behavior, but it may be computationally difficult to find the stationary distribution when state space is large.
+
+**Reversibility:**
+
+Let $Q=(q_{ij})$ is the transition matrix of a Markov chain. Suppose $\mathbf{s}=(s_1,...,s_M)$ where $s_i \geq 0, \sum_i s_i=1$ such that
+
+$$
+s_i q_{ij}=s_j q_{ji}
+$$
+
+$\forall\ i,j$ This equation is *reversibility* or *detailed balance* condition, and the chain is *reversible* with respect to $\mathbf{s}$ if it holds.
+
+So with a transition matrix, we can find a nonnegative vector $\mathbf{s}$ which sums to $1$ then it is a stationary distribution!
+
+**Reversible implies stationary**
+
+If $Q=(q_{ij})$ is a transition matrix of a Markov chain that is reversible with respect to a nonnegative $\mathbf{s}=(s_1,...,s_M)$ and $\sum_i s_i=1$, $\mathbf{s}$ is a stationary distribution of the chain.
+
+Why?
+
+$$
+\sum_i s_i q_{ij}= \sum_i s_j q_{ji} = s_j \sum_i q_{ji} = s_j
+$$
+
+Using this result, we can easily verify the reversibility condition which may be simpler than solving the system of equations $\mathbf{s}Q=\mathbf{s}$. We will look at $3$ types of Markov chains where is is possible to find an $\mathbf{s}$ that satisfies the reversibility. These Markov chains are called *reversible*.
