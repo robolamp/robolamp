@@ -192,3 +192,28 @@ $$
 $$
 
 Using this result, we can easily verify the reversibility condition which may be simpler than solving the system of equations $\mathbf{s}Q=\mathbf{s}$. We will look at $3$ types of Markov chains where is is possible to find an $\mathbf{s}$ that satisfies the reversibility. These Markov chains are called *reversible*.
+
+If each column of $Q$ sums to $1$, then the uniform distribution over all states, $(1/M,1/M,...,1/M)$ is a stationary distribution.
+A nonnegative matrix whose columns are all equal to $1$ is *doubly stochastic matrix*.
+
+If the Markov chain is a *random walk on an undirected network*, then there is a simple formula for the stationary distribution.
+
+**Network** is a collection of *nodes* joined by *edges*; it is undirected if you can travel through edges in both directions.
+
+Example:
+
+![image](network.png)
+
+The *degree* of a node is the number of attached edges.
+The *degree sequence* is vector $(d_1,...,d_n)$ where $d_j$ is a degree of $j$-th node. If the edge is from node to itself, it is called a *self-loop* and counts as $1$ in the degree of that node.
+
+For network above, it has a degree sequence $\mathbf{d}=(4,3,2,3,2)$. Also
+
+$$
+d_i q_{ij}=d_j q_{ji}\ \forall i,j
+$$
+
+because $q_{ij}$ is $1/d_i$ if there's an edge, else $0$. Therefore, the stationary distribution is proportional to the degree sequence. For the network above, $\mathbf{s}=(\frac{4}{14},\frac{3}{14},\frac{2}{14},\frac{3}{14},\frac{2}{14})$.
+
+
+**FIN.**
