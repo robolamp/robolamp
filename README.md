@@ -1,11 +1,11 @@
-# Welcome to my CV
+# Welcome to my GitHub! :sparkles:
 TL; DR: I am software engineer with major experience in roboics and self-driving cars.
 
 You can read my full CV here: [link to CV](https://github.com/robolamp/about_robolamp/blob/master/my_cv_eng.pdf "My CV in English")
 
 Less formal info on my personal [website](https://kotobank.ch/~robolamp/)
 
-## My talks
+## My talks :microphone:
 
 **Traffic Lights in Yandex Self-Driving Cars**
 
@@ -25,7 +25,7 @@ A short talk in Russian about data processing pipeline in Yandex Self-Driving Ca
 
 Presented at [Pytup Moscow](https://events.yandex.ru/events/pytup-26-02-2020)
 
-## My pet projects
+## My pet projects :dog:
 
 **rTerm**
 
