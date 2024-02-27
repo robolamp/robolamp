@@ -7,7 +7,7 @@ Less formal info on my personal [website](https://kotobank.ch/~robolamp/)
 
 ## My talks :microphone:
 
-**Traffic Lights in Yandex Self-Driving Cars**
+**Traffic Lights in Yandex Self-Driving Cars (2019)**
 
 A short talk in Russian about the difficulties of traffic lights recognition and about our traffic lights recognition pipeline.
 
@@ -19,11 +19,21 @@ An interactive talk in Russian about self-driving cars architecture, sensors and
 
 Presented at [WTM Moscow](https://gdgmoscow.timepad.ru/event/1101498/)
 
-**Data mining in Yandex Self-Driving Cars**
+**Data mining in Yandex Self-Driving Cars (2020)**
 
 A short talk in Russian about data processing pipeline in Yandex Self-Driving Car project
 
 Presented at [Pytup Moscow](https://events.yandex.ru/events/pytup-26-02-2020)
+
+**How does ChatGPT work? (2023)**
+
+A talk in Russian about how chatgpt works for tech folks who aren't working in AI.
+
+Presented at [Between Brackets podcast](https://youtu.be/g2u21UsAS84)
+
+**What's happening in AI world (2023)**
+
+A popular talk in Russian abour recent history and trends in AI world for non-tech people.
 
 ## My pet projects :dog:
 
