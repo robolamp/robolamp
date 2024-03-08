@@ -9,11 +9,9 @@
 % character encoding
 \usepackage[utf8]{inputenc}
 
-% adjust the page margins
-\usepackage[scale=0.75]{geometry}
-% \setlength{\hintscolumnwidth}{3cm}.
+\usepackage[scale=0.85, margin=15mm]{geometry}
+% \geometry{bottom=30mm}
 
-\usepackage[scale=0.75]{geometry}
 \setlength{\hintscolumnwidth}{3cm}
 
 % personal data
@@ -29,14 +27,27 @@
 \begin{document}
 \makecvtitle
 
+\section{Main skills}
+% \subsection{Main:}
+\cvitem{}{C++ (Eigen), Python (PyTorch, Jupyter, NumPy, Keras, TensorFlow, Sklearn), Git, ROS, Linux, Machine Learning, Deep Learning, HPC, Computer Vision, NLP, LLMs}
+% \subsection{Experience with:}
+% \cvitem{}{Bash, C, OpenCV, JS (some outdated frameworks), Django,  Docker, \LaTeX, Dynamic systems math
+% modelling, Matlab/Simulink. }
+
 \section{Experience}
 
 \cventry{November~2022 -- Now}{Machine learning engineer}{Stability.ai}{Amsterdam}{}{
   I worked on the following projects:
 \begin{itemize}   
     \item Stable-Finetuning (Python, PyTorch, CUDA, diffusion models, HPC):
-    \item Stability models API.
-    \item LLM-related effort.
+    I was mostly focused on whole preprocessing and training algorithm optimization.
+    With my effort, the fine-tuning prosess became multiple times faster while the size of model increased.
+    I managed to "accelerate" SAM to process big batches of images in less than 1 second.
+    To comply with regulation, I managed to build a facial fine-tuning without facial keypoints detection.
+    During the developed process, I was migrating the service between multiple generations of fine-tuned models and backends.
+    \item Stability models API (Python, PyTorch, CUDA, diffusion models, AWS, HPC):
+    Similar effort but without direct involvement into algorithms development.
+    \item LLM-related project (Python, PyTorch, CUDA, LLMs, axolotl, HPC).
 \end{itemize}}
 
 \cventry{March~2022 -- September~2022}{Machine learning engineer}{Rainbow.ai}{Warsaw}{}{
@@ -71,7 +82,8 @@
 \end{itemize}}
 
 \cventry{October~2015 -- August~2017}{Robotics researcher/developer}{Institute for Information Transmission Problems RAS (Kharkevich Institute)}{Moscow}{}{
-  I worked on self-driving car prototype positioning and control software including: system launch tool to replace ROSLaunch, positioning and control systems (C++, Python, ROS,  Eigen, Computer Vision, Kalman filters).
+  (C++, Python, ROS,  Eigen, Computer Vision, Kalman filters)
+%  I worked on self-driving car prototype positioning and control software including: system launch tool to replace ROSLaunch, positioning and control systems (C++, Python, ROS,  Eigen, Computer Vision, Kalman filters).
 % \begin{itemize}
 % \item Self-driving car prototype positioning and control software.
   % I created or worked on the following modules:
@@ -116,7 +128,7 @@ Full-stack web-development
 \cventry{2020}{Method of and system for determining traffic signal state}{}{}{}{
   Artamonov, Kalyuzhny, Yakovleva
   \begin{itemize}
-    \item US Patent US20210201058A1, application at 2020.09.28, pending.
+    \item US Patent US20210201058A1, application at 2020.09.28, granted.
     \item European Patent EP3842996A1, application at 2020.10.14, pending.
   \end{itemize}
 }
@@ -131,6 +143,10 @@ Full-stack web-development
 % about Yandex Self-Driving Cars traffic lights recognition pipeline. \newline
 % }
 \cventry{2020}{Data mining in Yandex Self-Driving Cars}{Presented at Pytup Moscow}{}{}{}
+% A short talk in Russian about data processing pipeline in
+% Yandex Self-Driving Cars project. \newline
+% }
+\cventry{2023}{What's going on in AI world}{Presented in Warsaw}{}{}{}
 % A short talk in Russian about data processing pipeline in
 % Yandex Self-Driving Cars project. \newline
 % }
@@ -151,23 +167,17 @@ Full-stack web-development
 }
 
 \section{Volunteering}
-\cventry{May~2020 -- now}{Web developer/data analyst}{OVD-Info}{Remote/Moscow}{}{
+\cventry{May~2020 -- now}{Web developer/data analyst}{OVD-Info}{Remote}{}{
   OVD-Info is an independent human rights media project.
-  I'm participating in development of information collection and analysis system for OVD-Info using SQL, Python and Django.
+  I'm participating in development and support of information collection and analysis systems for OVD-Info using SQL, Python and Django.
 }
+\cventry{Jan~2021 -- now}{Technical volunteer}{Memorial}{Remote}{}{}
 
-\section{Skills}
-\subsection{Main:}
-\cvitem{}{C++ (Eigen), Python (Jupyter, NumPy, Keras, Sklearn), Git, ROS, Linux, Machine Learning, Computer Vision. }
-\subsection{Experience with:}
-\cvitem{}{Bash, C, OpenCV, JS (some outdated frameworks), Django,  Docker, \LaTeX, Dynamic systems math
-modelling, Matlab/Simulink. }
-
-\section{Languages}
-\cvitemwithcomment{Russian}{Native speaker}{}
-\cvitemwithcomment{English}{Fluent}{}
-\cvitemwithcomment{German}{Beginner}{}
-\cvitemwithcomment{Tatar}{Beginner}{}
+% \section{Languages}
+% \cvitemwithcomment{Russian}{Native speaker}{}
+% \cvitemwithcomment{English}{Fluent}{}
+% \cvitemwithcomment{German}{Beginner}{}
+% \cvitemwithcomment{Tatar}{Beginner}{}
 
 \section{Pet projects}
 \cventry{}{rTerm}{\url{github.com/robolamp/rTerm}}{}{}{
