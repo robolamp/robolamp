@@ -35,6 +35,10 @@ Presented at [Between Brackets podcast](https://youtu.be/g2u21UsAS84)
 
 A popular talk in Russian abour recent history and trends in AI world for non-tech people.
 
+**llama.cpp and friends (2024)**
+
+A talk in English for tech professionals outside of AI, exploring the origins and functionality of llamacpp.
+
 ## My pet projects :dog:
 
 **rTerm**
