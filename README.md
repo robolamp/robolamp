@@ -3,7 +3,7 @@ TL; DR: I am software engineer with major experience in AI and robotics.
 
 You can read my CV here: [link to CV (short version)](https://github.com/robolamp/about_robolamp/blob/master/my_cv_eng.pdf "My CV (short version)") or [link to CV (long version)](https://github.com/robolamp/about_robolamp/blob/master/my_cv_full_eng.pdf "My CV (full version)")
 
-Less formal info on my personal [website](https://kotobank.ch/~robolamp/)
+Less formal info on my personal [website](https://robolamp.me/)
 
 ## My talks :microphone:
 
