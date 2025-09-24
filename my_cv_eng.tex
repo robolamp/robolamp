@@ -18,33 +18,43 @@
 \name{Yulia}{Yakovleva}
 \title{Machine Learning Engineer}
 \address{}{Amsterdam}{Netherlands}
-% \email{robolamp@ya.ru}
-\email{redslowj@gmail.com} 
+\email{robolamp@robolamp.me} 
 \social[github]{robolamp}
 \social[linkedin][https://www.linkedin.com/in/robolamp/]{Yulia Yakovleva}
-% \extrainfo{\url{kotobank.ch/~robolamp/}}
+\extrainfo{\url{robolamp.me}}
 
 \begin{document}
 \makecvtitle
 
 \section{Main skills}
-% \subsection{Main:}
-\cvitem{}{C++ (Eigen), Python (PyTorch, Jupyter, NumPy, Keras, TensorFlow, Sklearn), Git, ROS, Linux, Machine Learning, Deep Learning, HPC, Computer Vision, NLP, LLMs}
-% \subsection{Experience with:}
-% \cvitem{}{Bash, C, OpenCV, JS (some outdated frameworks), Django,  Docker, \LaTeX, Dynamic systems math
-% modelling, Matlab/Simulink. }
+\cvitem{Programming}{Python (PyTorch, TensorFlow, NumPy, Scikit-learn, Keras, huggingface, transformers, diffusers), C++ (Eigen), Git, Bash}
+\cvitem{AI/ML}{Model optimization, Generative AI, Diffusion Models, LLMs, Deep Learning, Computer Vision, NLP}
+\cvitem{Systems}{Linux, CUDA, HPC, AWS, Docker, ROS}
 
 \section{Experience}
 
-\cventry{November~2022 -- May~2024}{Machine learning engineer}{Stability.ai}{Amsterdam}{}{
+\cventry{November~2024 -- now}{Machine Learning Engineer}{Creative Fabrica}{Amsterdam}{}{
+\begin{itemize}
+    \item Accelerated text-to-font pipeline from minutes to seconds, enabling scalable user-facing applications.
+    \item Developed a fast, efficient pipeline for vector graphics analysis and modification.
+    \item Built a custom SOTA benchmarking pipeline for generative models to evaluate and compare image generation quality.
+    \item (Python, GenAI, Image generation, huggingface, diffusers, transformers, inference optimization, vector graphics generation)
+\end{itemize}}
+
+
+\cventry{June~2024 -- October~2024}{Head of ML Research}{AI Neko}{Remote/Amsterdam}{}{
+\begin{itemize}
+    \item Led short-term research on efficient LLM inference, benchmarking open-source tools (GGML, llama.cpp, transformers, quantization) and delivering prototypes in C++/Python.
+\end{itemize}}
+
+\cventry{November~2022 -- May~2024}{Machine Learning Engineer}{Stability.ai}{Remote/Amsterdam}{}{
   I worked on the following projects:
 \begin{itemize}   
     \item Stable-Finetuning (Python, PyTorch, CUDA, diffusion models, HPC):
-    I was mostly focused on whole preprocessing and training algorithm optimization.
-    With my effort, the fine-tuning prosess became multiple times faster while the size of model increased.
-    I managed to "accelerate" SAM to process big batches of images in less than 1 second.
-    To comply with regulation, I managed to build a facial fine-tuning without facial keypoints detection.
-    During the developed process, I was migrating the service between multiple generations of fine-tuned models and backends.
+    Focused on preprocessing and training algorithm optimization, achieving multi-fold speedups while the size of model increased.
+    Accelerated SAM to process large batches of images in less than 1 second
+    Built a regulatory-compliant facial fine-tuning pipeline without facial keypoints detection.
+    Migrated services across multiple generations of fine-tuned models and backends.
     \item Stability models API (Python, PyTorch, CUDA, diffusion models, AWS, HPC):
     Similar effort but without direct involvement into algorithms development.
     \item LLM-related project (Python, PyTorch, CUDA, LLMs, axolotl, HPC).
@@ -52,18 +62,18 @@
 
 \cventry{March~2022 -- September~2022}{Machine learning engineer}{Rainbow.ai}{Warsaw}{}{
 \begin{itemize}
-    \item I worked on applying deep learning models for weather forecasting (Python, PyTorch, Weather RADAR data).
+    \item Contributed to applying deep learning models for weather forecasting (Python, PyTorch, Weather RADAR data).
 \end{itemize}}
 
 \cventry{November~2021 -- February~2022}{Machine learning engineer}{Descriptor.ai}{Remote/Moscow}{}{
 \begin{itemize}
-    \item I created a few good-performing voice sentiment analysis models (Python, NumPy, TensorFlow, Keras, Audio data).
+    \item Delivered sentiment analysis models for voice data with strong performance (Python, NumPy, TensorFlow, Keras, Audio data).
 \end{itemize}}
 
 \cventry{July~2021 -- October~2021}{Machine learning engineer}{MediaZona}{Remote/Moscow}{}{
 \begin{itemize}
     \item AI Text Generation (NLP, Python, NumPy, TensorFlow, Keras, Transformers, GPT):
-      I worked on conditional text generation with neural networks.
+      Developed conditional text generation models ahead of mainstream adoption.
       My responsibilities included both engineering/coding and interaction with non-tech employees of MediaZona on translating their 
       non-tech requirements into "tech language", finding the data and getting a feedback on text generators' work.
 \end{itemize}}
@@ -124,16 +134,7 @@ Full-stack web-development
 % \end{itemize}
 }
 
-\section{Patents}
-\cventry{2020}{Method of and system for determining traffic signal state}{}{}{}{
-  Artamonov, Kalyuzhny, Yakovleva
-  \begin{itemize}
-    \item US Patent US20210201058A1, application at 2020.09.28, granted.
-    \item European Patent EP3842996A1, application at 2020.10.14, pending.
-  \end{itemize}
-}
-
-\section{Talks}
+\section{Publications \& Talks}
 \cventry{2019}{Myths about Self-Driving Cars}{Presented at WTM Moscow}{}{}{}
 % An interactive talk in Russian about self-driving cars architecture,
 % sensors and testing. \newline
@@ -146,6 +147,14 @@ Full-stack web-development
 % A short talk in Russian about data processing pipeline in
 % Yandex Self-Driving Cars project. \newline
 % }
+\cventry{2020}{Method of and system for determining traffic signal state}{}{}{}{
+  Artamonov, Kalyuzhny, Yakovleva
+  \begin{itemize}
+    \item US Patent US20210201058A1, application at 2020.09.28, granted.
+    \item European Patent EP3842996A1, application at 2020.10.14, pending.
+  \end{itemize}
+}
+
 \cventry{2023}{How does ChatGPT work?}{Presented on a YouTube}{}{}{}
 \cventry{2023}{What's going on in AI world}{Presented in Warsaw}{}{}{}
 % A short talk in Russian about data processing pipeline in
@@ -162,23 +171,33 @@ Full-stack web-development
 
 \cvitem{2015--2017}{
   \textbf{Moscow Institute of Physics and Technology (State University)}; \newline
-  Deparment of Innovation and High Technologies; \newline
+  Department of Innovation and High Technologies; \newline
   Cognitive technologies sub-faculty; \newline
   MSc in Computer Science.
 }
 
 \section{Volunteering}
-\cventry{May~2020 -- now}{Web developer/data analyst}{OVD-Info}{Remote}{}{
+\cventry{May~2020 -- now}{Technical volunteer (Backend \& Machine Learning)}{OVD-Info}{Remote}{}{
   OVD-Info is an independent human rights media project.
-  I'm participating in development and support of information collection and analysis systems for OVD-Info using SQL, Python and Django.
+  \begin{itemize}
+    \item Developed and maintained backend systems for information collection and analysis (SQL, Python and Django).
+    \item Delivered ad-hoc data analysis and built pipelines for online text data processing and monitoring (Python, NLP, LLMs, PyTorch). 
+  \end{itemize}
 }
-\cventry{Jan~2021 -- now}{Technical volunteer}{Memorial}{Remote}{}{}
+\cventry{Jan~2021 -- now}{Technical volunteer}{Memorial}{Remote}{}{
+  Memorial is one of the oldest Russian human rights NGOs.
+  \begin{itemize}
+    \item Provided technical and administrative support for internal systems and documentation.
+  \end{itemize}
+}
 
 % \section{Languages}
 % \cvitemwithcomment{Russian}{Native speaker}{}
+% \cvitemwithcomment{Tatar}{Native speaker}{}
 % \cvitemwithcomment{English}{Fluent}{}
+% \cvitemwithcomment{Polish}{Beginner}{}
 % \cvitemwithcomment{German}{Beginner}{}
-% \cvitemwithcomment{Tatar}{Beginner}{}
+% \cvitemwithcomment{Dutch}{Beginner}{}
 
 \section{Pet projects}
 \cventry{}{rTerm}{\url{github.com/robolamp/rTerm}}{}{}{
