@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yulia Yakovleva - CV</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 11pt;
+            line-height: 1.45;
+            color: #333;
+            background: #fff;
+        }
+        a { color: #0d5a8f; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { display: flex; max-width: 1200px; margin: 0 auto; }
+        .main-content { flex: 1; padding: 50px 40px 50px 50px; }
+        .sidebar { width: 320px; background-color: #e8f2f7; padding: 50px 30px; }
+        h1 { font-size: 36pt; color: #0d5a8f; margin-bottom: 6px; font-weight: 600; }
+        .subtitle { font-size: 13pt; color: #666; margin-bottom: 28px; }
+        h2 {
+            font-size: 11pt; color: #0d5a8f; text-transform: uppercase;
+            font-weight: 700; letter-spacing: 0.5px; margin-top: 26px; margin-bottom: 14px;
+        }
+        .sidebar h2 { margin-top: 30px; }
+        .sidebar h2:first-of-type { margin-top: 0; }
+        .job-section { margin-bottom: 20px; }
+        .job-header { margin-bottom: 8px; }
+        .job-title { font-weight: 600; font-size: 11pt; }
+        .job-dates { float: right; font-size: 10pt; color: #333; }
+        .company-name { font-style: italic; color: #555; font-size: 10pt; margin-bottom: 8px; }
+        ul { margin-left: 20px; margin-top: 6px; }
+        li { margin-bottom: 6px; font-size: 10pt; }
+        .sidebar-section { margin-bottom: 20px; font-size: 10pt; }
+        .contact-item { margin-bottom: 8px; word-wrap: break-word; }
+        .skill-category { margin-bottom: 12px; }
+        .skill-label { font-style: italic; color: #666; margin-bottom: 4px; font-size: 9.5pt; }
+        .skill-list { list-style: none; margin-left: 0; }
+        .skill-list li { margin-bottom: 3px; font-size: 9.5pt; }
+        .skill-list li:before { content: "• "; margin-right: 5px; }
+        .education-item { margin-bottom: 15px; }
+        .degree { font-weight: 600; font-size: 10pt; }
+        .school { font-style: italic; color: #555; font-size: 9.5pt; }
+        .dates { font-size: 9.5pt; color: #666; }
+        .clearfix::after { content: ""; display: table; clear: both; }
+        .tagline { font-size: 9.5pt; color: #777; margin-top: -8px; margin-bottom: 16px; }
+        .muted { color: #666; }
+        .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+        .previous-experience .job-section {
+            margin-bottom: 6px;
+        }
+        .previous-experience .job-title {
+            font-size: 9.5pt;
+            font-weight: 600;
+        }
+        .previous-experience .company-name {
+            font-size: 9pt;
+            color: #666;
+            font-style: normal;
+            margin-bottom: 2px;
+        }
+        .previous-experience .job-dates {
+            font-size: 9pt;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>Yulia Yakovleva</h1>
+            <div class="subtitle">Machine Learning Engineer</div>
+
+            <h2>Main Experience</h2>
+
+            <div class="job-section">
+                <div class="job-header clearfix">
+                    <span class="job-title">Machine Learning Engineer</span>
+                    <span class="job-dates">10/2024 – Present</span>
+                </div>
+                <div class="company-name">Creative Fabrica · Amsterdam</div>
+                <ul>
+                    <li>Accelerated text-to-font pipeline from minutes to seconds, enabling scalable user-facing applications.</li>
+                    <li>Developed a fast, efficient pipeline for vector graphics analysis and modification.</li>
+                    <li>Built a custom SOTA benchmarking pipeline for generative models to evaluate and compare image generation quality.</li>
+                    <li class="muted">Stack: Python, Generative AI, image generation, Hugging Face, Diffusers, Transformers, inference optimization, vector graphics.</li>
+                </ul>
+            </div>
+            <div class="job-section">
+                <div class="job-header clearfix">
+                    <span class="job-title">Machine Learning Engineer</span>
+                    <span class="job-dates">11/2022 – 06/2024</span>
+                </div>
+                <div class="company-name">Stability.ai · Remote / Amsterdam</div>
+                <ul>
+                    <li>Optimized preprocessing and training at fine-tuning pipelines, achieving multi-fold speedups as model sizes increased.</li>
+                    <li>Accelerated SAM to process large batches of images in &lt; 1 second.</li>
+                    <li>Built a regulatory-compliant facial fine-tuning pipeline without facial keypoints detection.</li>
+                    <li>Migrated services across generations of fine-tuned models and backends.</li>
+                    <li>Also contributed to Stability Models API and an LLM-related project.</li>
+                    <li class="muted">Stack: Python, PyTorch, CUDA, diffusion models, AWS/HPC.</li>
+                </ul>
+            </div>
+            <div class="job-section">
+                <div class="job-header clearfix">
+                    <span class="job-title">ML Engineer (NLP)</span>
+                    <span class="job-dates">07/2021 – 10/2021</span>
+                </div>
+                <div class="company-name">MediaZona · Remote / Moscow</div>
+                <ul>
+                    <li>Developed conditional text generation models ahead of mainstream adoption.</li>
+                    <li>Bridged non-tech editorial requirements into actionable ML tasks; data sourcing and feedback loops for text generators.</li>
+                    <li class="muted">Stack: NLP, Python, NumPy, TensorFlow, Keras, Transformers, GPT.</li>
+                </ul>
+            </div>
+
+            <div class="job-section">
+                <div class="job-header clearfix">
+                    <span class="job-title">Software Engineer</span>
+                    <span class="job-dates">03/2018 – 05/2021</span>
+                </div>
+                <div class="company-name">Yandex Self-Driving Cars · Moscow</div>
+                <ul>
+                    <li>Created data-quality diagnostics for camera &amp; LiDAR sensors.</li>
+                    <li>Improved traffic lights recognition &amp; tracking; led data mining, preprocessing, dataset prep; trained and deployed multiple DNN iterations now used on hundreds of AVs.</li>
+                    <li class="muted">Stack: ROS, C++, Python, NumPy, TensorFlow, Keras.</li>
+                </ul>
+            </div>
+
+            <!-- Previous Experience -->
+            <h2>Previous Experience</h2>
+            <div class="previous-experience">
+                <div class="job-section">
+                    <div class="job-header clearfix">
+                        <span class="job-title">Robotics Researcher / Developer</span>
+                        <span class="job-dates">9/2015 – 08/2017</span>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <div class="job-header clearfix">
+                        <span class="job-title">Junior Control Systems Developer</span>
+                        <span class="job-dates">07/2013 – 06/2015</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Publications &amp; Talks</h2>
+            <ul>
+                <li><span class="mono">2019</span> — <strong>Myths about Self-Driving Cars</strong> — Presented at <a href="https://gdgmoscow.timepad.ru/event/1101498/">WTM Moscow</a>.</li>
+                <li><span class="mono">2019</span> — <strong>Traffic Lights in Yandex Self-Driving Cars</strong> — Presented at <a href="https://medium.com/yandex-self-driving-car/yandex-self-driving-meetup-817e905b3d4a">Yandex Self-Driving Meetup 2019</a>, <a href="https://twitter.com/pyladies_msk/status/1145709227513733120">PyLadies Moscow</a>, <a href="https://x.com/pyladieskzn/status/1161901466430377985">PyLadies Kazan</a>.</li>
+                <li><span class="mono">2020</span> — <strong>Data mining in Yandex Self-Driving Cars</strong> — Presented at <a href="https://events.yandex.ru/events/pytup-26-02-2020">Pytup Moscow</a>.</li>
+                <li><span class="mono">2020</span> — <strong>Method of and system for determining traffic signal state</strong> — Patent: <a href="https://patents.google.com/patent/US20210201058A1">US20210201058A1</a> (granted), <a href="https://patents.google.com/patent/EP3842996A1">EP3842996A1</a> (pending). Authors: Artamonov, Kalyuzhny, Yakovleva.</li>
+                <li><span class="mono">2023</span> — <strong>How does ChatGPT work?</strong> — <a href="https://youtu.be/g2u21UsAS84">Between Brackets podcast</a>.</li>
+                <li><span class="mono">2023</span> — <strong>What's going on in AI world</strong> — Presented in Warsaw.</li>
+            </ul>
+
+            <h2>Volunteering</h2>
+            <ul>
+                <li><strong>Technical Volunteer (Backend &amp; ML), OVD-Info</strong> — May 2020 – Present. Backend systems (SQL, Python, Django), ad-hoc data analysis, and online text-processing/monitoring pipelines (Python, NLP, LLMs, PyTorch).</li>
+                <li><strong>Technical Volunteer, Memorial</strong> — Jan 2021 – Present. Technical &amp; administrative support for internal systems and documentation.</li>
+            </ul>
+
+            <h2>Pet Projects</h2>
+            <ul>
+                <li><strong>rTerm</strong> — <a href="https://github.com/robolamp/rTerm">github.com/robolamp/rTerm</a>. Fake JS-based UNIX terminal for my personal page.</li>
+                <li><strong>Random three-body problem bot</strong> — <a href="https://github.com/robolamp/3_body_problem_bot">github.com/robolamp/3_body_problem_bot</a>. Simulates random three-body systems and posts animations to a <a href="https://t.me/random_three_body_problem">Telegram channel</a> every 12 hours.</li>
+            </ul>
+        </div>
+
+        <div class="sidebar">
+            <h2>Contact</h2>
+            <div class="sidebar-section">
+                <div class="contact-item">Amsterdam, Netherlands</div>
+                <div class="contact-item"><a href="mailto:robolamp@robolamp.me">robolamp@robolamp.me</a></div>
+                <div class="contact-item"><a href="https://www.linkedin.com/in/robolamp/">linkedin.com/in/robolamp</a></div>
+                <div class="contact-item"><a href="https://github.com/robolamp">github.com/robolamp</a></div>
+                <div class="contact-item"><a href="https://www.robolamp.me">robolamp.me</a></div>
+            </div>
+
+            <h2>Skills</h2>
+            <div class="sidebar-section">
+                <div class="skill-category">
+                    <div class="skill-label">Programming</div>
+                    <ul class="skill-list">
+                        <li>Python (PyTorch, TensorFlow, NumPy, Scikit-learn, Keras)</li>
+                        <li>Hugging Face, Transformers, Diffusers</li>
+                        <li>C++ (Eigen)</li>
+                        <li>Git, Bash</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-label">AI / ML</div>
+                    <ul class="skill-list">
+                        <li>Model optimization</li>
+                        <li>Generative AI, Diffusion Models</li>
+                        <li>LLMs, Deep Learning</li>
+                        <li>Computer Vision, NLP</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-label">Systems</div>
+                    <ul class="skill-list">
+                        <li>Linux</li>
+                        <li>HPC</li>
+                        <li>Docker</li>
+                        <li>ROS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Education</h2>
+            <div class="sidebar-section">
+                <div class="education-item">
+                    <div class="degree">MSc in Computer Science</div>
+                    <div class="school">Moscow Institute of Physics and Technology (State University)</div>
+                    <div class="dates">2015 – 2017</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">MEng with honours</div>
+                    <div class="school">National Research South Ural State University</div>
+                    <div class="dates">2010 – 2015</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
