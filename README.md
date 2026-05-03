@@ -42,7 +42,9 @@ A talk in English for tech professionals outside of AI, exploring the origins an
 ## My pet projects :dog:
 
 **smol-llm-proxy**
+
 The name speaks for itself
+
 [Link to repo](https://robolamp/smol-llm-proxy)
 
 **rTerm**
