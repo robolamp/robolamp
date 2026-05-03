@@ -45,7 +45,7 @@ A talk in English for tech professionals outside of AI, exploring the origins an
 
 The name speaks for itself
 
-[Link to repo](https://robolamp/smol-llm-proxy)
+[Link to repo](https://github.com/robolamp/smol-llm-proxy)
 
 **rTerm**
 
